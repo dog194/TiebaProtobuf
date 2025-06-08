@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message SpecialPost {
+    int32 is_recent_post = 1;
+    string special_tip = 2;
+}

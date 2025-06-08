@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "CommonReq.proto";
+
+message DataReq {
+    CommonReq f1332common = 1;
+    int32 vip_close = 2;
+    int32 live_close = 3;
+}

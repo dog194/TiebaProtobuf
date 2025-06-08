@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+import "ListingReason.proto";
+import "ShopGoodsChannelInfo.proto";
+import "ShopGoodsCommentInfo.proto";
+import "ShopGoodsRecommendInfo.proto";
+
+message ShopGoodsInfo {
+    string goods_name = 1;
+    uint32 price = 2;
+    int64 sales = 3;
+    ShopGoodsRecommendInfo recommend_info = 4;
+    uint32 card_style = 5;
+    ShopGoodsChannelInfo channel_info = 6;
+    string cover_img = 7;
+    string url = 8;
+    uint64 thread_id = 9;
+    ListingReason listing_reason = 10;
+    ShopGoodsCommentInfo comment_info = 11;
+    string scheme = 12;
+}

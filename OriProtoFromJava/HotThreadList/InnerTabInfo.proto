@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+message InnerTabInfo {
+    string name = 1;
+    string jump_scheme = 2;
+    string icon = 3;
+    uint32 notify_version = 4;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "User.proto";
+
+message VoiceRoom {
+    int64 room_id = 2;
+    User author = 4;
+    repeated User talker = 5;
+    int64 joined_num = 6;
+    int64 talker_num = 7;
+    uint32 status = 8;
+    string room_name = 9;
+    int64 reserved_num = 10;
+    int64 reserved_time = 11;
+    int64 left_reserved_time = 12;
+    uint32 is_subcribed = 13;
+}

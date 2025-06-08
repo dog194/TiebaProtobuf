@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "AiInteractiveGamePlot.proto";
+import "RecomTopicList.proto";
+import "SimpleForum.proto";
+import "ThreadInfo.proto";
+
+message CardData {
+    ThreadInfo thread_info = 1;
+    repeated SimpleForum forum_list = 2;
+    repeated RecomTopicList topic_list = 3;
+    AiInteractiveGamePlot ai_interactive_game_plot = 4;
+}

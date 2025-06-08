@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+import "SidewayRecomComponent.proto";
+
+message SidewayListComponent {
+    int32 screen_max_num = 1;
+    repeated SidewayRecomComponent content = 2;
+}

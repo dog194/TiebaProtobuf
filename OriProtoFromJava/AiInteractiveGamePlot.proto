@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message AiInteractiveGamePlot {
+    int64 plot_id = 1;
+    string bot_uk = 3;
+    int64 bot_pa = 4;
+    string portrait_url = 5;
+    string plot_title = 6;
+    string plot_description = 7;
+    string bot_background_url = 8;
+    double rate = 9;
+}

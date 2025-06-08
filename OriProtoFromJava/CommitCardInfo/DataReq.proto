@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "CommonReq.proto";
+
+message DataReq {
+    CommonReq f1334common = 1;
+    int32 card_type = 3;
+    string image_info = 4;
+}

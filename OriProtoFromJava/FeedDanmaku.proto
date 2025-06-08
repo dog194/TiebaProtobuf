@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+import "Danmaku.proto";
+
+message FeedDanmaku {
+    repeated Danmaku danmaku = 1;
+}

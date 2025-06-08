@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "FeedKV.proto";
+
+message FeedHeadImg {
+    string img_url = 1;
+    uint32 shape_type = 2;
+    string pendant_url = 3;
+    string corner_url = 4;
+    string schema = 5;
+    repeated string masks = 6;
+    repeated FeedKV business_info = 7;
+}

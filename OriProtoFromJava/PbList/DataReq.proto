@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+import "CommonReq.proto";
+
+message DataReq {
+    CommonReq f1490common = 1;
+    int64 kz = 2;
+    int32 pn = 3;
+    int64 last_pid = 4;
+    int32 r = 5;
+    int32 back = 6;
+    int32 lz = 7;
+    int32 mark_type = 8;
+}

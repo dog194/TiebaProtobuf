@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+import "FeedButton.proto";
+import "FeedContentText.proto";
+import "FeedKV.proto";
+import "TitleComponent.proto";
+
+message SidewayRecomComponent {
+    int32 type = 1;
+    FeedContentText title = 2;
+    FeedContentText desc = 3;
+    string img_url = 4;
+    string corner_url = 5;
+    repeated FeedKV business_info = 6;
+    string schema = 7;
+    repeated FeedKV appendix = 8;
+    FeedContentText sub_desc = 9;
+    TitleComponent tag_list = 10;
+    FeedButton button = 11;
+    repeated FeedKV log_param = 12;
+}

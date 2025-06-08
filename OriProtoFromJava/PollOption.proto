@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+message PollOption {
+    int32 id = 1;
+    int64 num = 2;
+    string text = 3;
+    string image = 4;
+    int32 is_polled = 5;
+}

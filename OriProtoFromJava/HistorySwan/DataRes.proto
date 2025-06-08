@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+import "SmartApp.proto";
+
+message DataRes {
+    repeated SmartApp naws_list = 1;
+}

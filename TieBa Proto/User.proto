@@ -1,0 +1,153 @@
+syntax = "proto3";
+
+message User {
+	int64 id = 2;
+	string name = 3;
+	string name_show = 4;
+	string portrait = 5;
+	int32 userhide = 9;
+	message Balv {
+		int32 is_black = 1;
+		int32 is_block = 2;
+		int32 days_tofree = 3;
+	}
+	Balv balv = 10;
+	string rank = 12;
+	int32 is_verify = 15;
+	int32 is_interestman = 16;
+	message Icon {
+		string name = 1;
+		string url = 3;
+		string icon = 4;
+		repeated string sprite_info = 8;
+	}
+	repeated Icon iconinfo = 17;
+	message TshowInfo {
+		string icon = 1;
+		string name = 2;
+		string url = 3;
+	}
+	repeated TshowInfo tshow_icon = 18;
+	int32 user_type = 19;
+	int32 is_coreuser = 20;
+	int32 level_id = 23;
+	int32 is_bawu = 25;
+	string bawu_type = 26;
+	string portraith = 27;
+	string ip = 28;
+	string BDUSS = 29;
+	int32 fans_num = 30;
+	int32 concern_num = 31;
+	int32 sex = 32;
+	int32 my_like_num = 33;
+	string intro = 34;
+	int32 post_num = 37;
+	string tb_age = 38;
+	int32 gender = 42;
+	int32 is_mask = 43;
+	message PrivSets {
+		int32 location = 1;
+		int32 like = 2;
+		int32 group = 3;
+		int32 post = 4;
+		int32 friend = 5;
+		int32 live = 6;
+		int32 reply = 7;
+		int32 bazhu_show_inside = 8;
+		int32 bazhu_show_outside = 9;
+	}
+	PrivSets priv_sets = 45;
+	message LikeForumInfo {
+		string forum_name = 1;
+		uint64 forum_id = 2;
+	}
+	repeated LikeForumInfo likeForum = 47;
+	int32 is_guanfang = 52;
+	message UserVipInfo {
+		uint32 v_status = 1;
+		uint32 s_time = 2;
+		uint32 e_time = 3;
+		uint32 ext_score = 4;
+		uint32 v_level = 5;
+		int32 a_score = 6;
+		uint32 n_score = 7;
+		string icon_url = 8;
+		uint32 stay_day = 9;
+	}
+	UserVipInfo vipInfo = 61;
+	message GodInfo {
+		int64 id = 1;
+		string intro = 2;
+		int32 type = 3;
+		int64 fid = 4;
+		int32 followed = 5;
+		string recommend_reason = 6;
+		string forum_name = 7;
+		int32 can_send_msg = 8;
+		string prefix = 9;
+	}
+	GodInfo god_data = 62;
+	int32 heavy_user = 63;
+	message VipShowInfo {
+		string vip_icon = 1;
+		string content = 2;
+		string link = 3;
+		string title = 4;
+	}
+	VipShowInfo vip_show_info = 64;
+	repeated TshowInfo new_tshow_icon = 65;
+	message TbVipInfo {
+		string intro = 1;
+		string v_url = 2;
+		string v_detail = 3;
+	}
+	TbVipInfo tb_vip = 72;
+	string seal_prefix = 79;
+	int32 nickname_update_time = 86;
+	int32 thread_num = 87;
+	int32 agree_num = 88;
+	int32 left_call_num = 89;
+	int32 priv_thread = 92;
+	int32 can_modify_avatar = 97;
+	string modify_avatar_desc = 98;
+	int32 influence = 99;
+	string level_influence = 100;
+	message NewGodInfo {
+		int32 status = 1;
+		uint32 field_id = 2;
+		string field_name = 3;
+		uint32 type = 4;
+		string type_name = 5;
+	}
+	NewGodInfo new_god_data = 101;
+	int32 is_default_avatar = 106;
+	string uk = 107;
+	int32 favorite_num = 109;
+	uint32 total_agree_num = 118;
+	string tieba_uid = 120;
+	int32 display_auth_type = 123;
+	string level_name = 125;
+	string ip_address = 127;
+	int32 is_nickname_editing = 128;
+	string editing_nickname = 129;
+	message VirtualImageInfo {
+		int32 isset_virtual_image = 1;
+		string virtual_background = 6;
+		message StateInfo {
+			string icon = 1;
+			string text = 2;
+		}
+		StateInfo personal_state = 9;
+		int32 is_display = 12;
+	}
+	VirtualImageInfo virtual_image_info = 136;
+	message UserGrowth {
+		uint32 level_id = 1;
+		int64 score = 2;
+		int64 target_score = 3;
+		double tmoney = 4;
+	}
+	UserGrowth user_growth = 137;
+	string display_intro = 138;
+	string avatar_url = 152;
+}

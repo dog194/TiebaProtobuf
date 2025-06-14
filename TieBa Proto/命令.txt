@@ -1,0 +1,4 @@
+protoc --cpp_out=<输出目录> <proto文件路径>
+.\protoc.exe --cpp_out=. X.proto
+
+php.exe squareWireProtoBufJavaGeneratedClassesDecompiler.php --in= --out=

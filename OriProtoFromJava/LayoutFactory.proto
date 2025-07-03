@@ -2,6 +2,7 @@ syntax = "proto3";
 
 import "BannerCardLayout.proto";
 import "CardFrequency.proto";
+import "DiscussLayout.proto";
 import "FeedKV.proto";
 import "FeedLayout.proto";
 import "FeedStaggerLayout.proto";
@@ -42,4 +43,5 @@ message LayoutFactory {
     FeedbackCardLayout bawu_feedback_card = 21;
     QuestionCard question_card = 22;
     FeedStaggerLayout feed_stagger_layout = 23;
+    DiscussLayout discuss_card = 24;
 }

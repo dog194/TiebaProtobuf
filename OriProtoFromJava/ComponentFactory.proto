@@ -10,6 +10,7 @@ import "FeedBannerComponent.proto";
 import "FeedButtonComponent.proto";
 import "FeedConfigurableHeadComponent.proto";
 import "FeedDanmaku.proto";
+import "FeedDiscussComponent.proto";
 import "FeedEntrybarComponent.proto";
 import "FeedFlipPage.proto";
 import "FeedGuideCardComponent.proto";
@@ -41,6 +42,7 @@ import "FeedToutiao.proto";
 import "FeedVideoAdComponent.proto";
 import "FeedVideoComponent.proto";
 import "FrsTopThreadComponent.proto";
+import "LoopAvatarWithBtnComponent.proto";
 import "MultiThreadComponent.proto";
 import "PollInfo.proto";
 import "ScoreFeedbackComponent.proto";
@@ -106,4 +108,6 @@ message ComponentFactory {
     FeedRecomtagStaggeredComponent feed_recomtag_staggered = 53;
     FeedInteractionComponent feed_interaction = 54;
     FeedTipsComponent feed_tips = 55;
+    LoopAvatarWithBtnComponent feed_loop_avatar_with_btn = 56;
+    FeedDiscussComponent feed_discuss = 57;
 }

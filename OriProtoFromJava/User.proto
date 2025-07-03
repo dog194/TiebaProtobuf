@@ -13,10 +13,12 @@ import "BusinessAccountInfo.proto";
 import "CallFansInfo.proto";
 import "ConsumeInfo.proto";
 import "CreationData.proto";
+import "CurrentNameInfo.proto";
 import "Ecom.proto";
 import "EditConfig.proto";
 import "EsportInfo.proto";
 import "FeedKV.proto";
+import "FormerNameInfo.proto";
 import "ForumToolPerm.proto";
 import "GiftInfo.proto";
 import "GodInfo.proto";
@@ -209,4 +211,7 @@ message User {
     int32 is_mgc_account = 160;
     int32 truncate_line = 161;
     int32 is_need_auto_at = 162;
+    int32 show_former_name = 163;
+    FormerNameInfo former_name_info = 164;
+    CurrentNameInfo current_name_info = 165;
 }

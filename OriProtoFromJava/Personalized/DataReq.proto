@@ -5,7 +5,7 @@ import "AppTransmitData.proto";
 import "CommonReq.proto";
 
 message DataReq {
-    CommonReq f1496common = 1;
+    CommonReq f1503common = 1;
     uint32 tag_code = 2;
     uint32 need_tags = 3;
     uint32 load_type = 4;
@@ -46,4 +46,6 @@ message DataReq {
     uint32 is_new_user = 44;
     string ad_external_info = 45;
     uint32 cache_column_style = 46;
+    uint64 fake_thread_id = 47;
+    uint64 fake_forum_id = 48;
 }

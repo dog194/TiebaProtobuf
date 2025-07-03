@@ -64,6 +64,7 @@ import "ThreadRecommendInfo.proto";
 import "ThreadRecommendTag.proto";
 import "ThreadScoreInfo.proto";
 import "ThreadVideoCard.proto";
+import "ThreadVideoOtherInfo.proto";
 import "TiebaPlusAd.proto";
 import "TogetherHi.proto";
 import "Topic.proto";
@@ -322,4 +323,6 @@ message ThreadInfo {
     uint32 tiebaplus_da_type_click = 254;
     ThreadVideoCard video_card = 255;
     int32 poll_style = 256;
+    string feed_nid = 257;
+    ThreadVideoOtherInfo video_other_info = 259;
 }

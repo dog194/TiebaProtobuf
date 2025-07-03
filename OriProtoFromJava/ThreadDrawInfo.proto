@@ -9,4 +9,5 @@ message ThreadDrawInfo {
     uint32 join_status = 4;
     uint32 open_status = 5;
     uint64 open_time = 6;
+    uint32 lottery_type = 7;
 }

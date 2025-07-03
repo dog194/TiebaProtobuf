@@ -36,4 +36,6 @@ message ThreadRecommendInfo {
     ThemeColorInfo button_color = 29;
     string button_link = 30;
     repeated FeedKV log_param = 31;
+    string price = 33;
+    ThemeColorInfo icon_info = 34;
 }

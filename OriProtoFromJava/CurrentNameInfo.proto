@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message CurrentNameInfo {
+    int64 update_time = 1;
+    int64 source = 2;
+}

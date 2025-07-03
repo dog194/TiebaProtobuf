@@ -6,6 +6,7 @@ import "Advertisement.proto";
 import "Agree.proto";
 import "AichatBotCommentCard.proto";
 import "AigcFeedbackInfo.proto";
+import "BdtSearchInfo.proto";
 import "BotReplyContent.proto";
 import "CallRobotEntrance.proto";
 import "CardLinkInfo.proto";
@@ -132,4 +133,7 @@ message Post {
     string ios_b_url = 87;
     SpecialPost special_post = 88;
     string footer = 89;
+    BdtSearchInfo bdt_search_info = 90;
+    int32 bdt_user_adopt = 91;
+    string tmoney = 92;
 }

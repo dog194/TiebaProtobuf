@@ -18,4 +18,6 @@ message ShopGoodsInfo {
     ListingReason listing_reason = 10;
     ShopGoodsCommentInfo comment_info = 11;
     string scheme = 12;
+    string goods_desc = 13;
+    uint32 goods_id = 14;
 }

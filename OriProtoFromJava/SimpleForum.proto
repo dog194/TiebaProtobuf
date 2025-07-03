@@ -37,4 +37,7 @@ message SimpleForum {
     string slogan = 26;
     int32 thread_num = 27;
     repeated ThreadRecommendTag forum_tags = 28;
+    string official_icon = 29;
+    string official_text = 30;
+    int32 is_official_forum = 31;
 }

@@ -22,6 +22,7 @@ import "MutliAichatBotCard.proto";
 import "NaGuide.proto";
 import "Page.proto";
 import "PbHotPost.proto";
+import "PbPage/AdFilter.proto";
 import "PbPage/AddPost.proto";
 import "PbPage/AiChatCard.proto";
 import "PbPage/AppealInfo.proto";
@@ -168,4 +169,5 @@ message DataRes {
     MutliAichatBotCard mutli_aichat_bot_card = 104;
     SettingInfo setting_info = 105;
     ForumShopGoodsInfo shop_goods_info = 106;
+    AdFilter ad_filter = 107;
 }

@@ -31,7 +31,7 @@ message DataReq {
     int32 arround = 22;
     int32 last = 23;
     string msg_click = 24;
-    CommonReq f1492common = 25;
+    CommonReq f1499common = 25;
     string lastids = 26;
     string st_from = 27;
     string st_link = 28;
@@ -104,4 +104,6 @@ message DataReq {
     string ad_external_info = 104;
     int64 topic_id = 105;
     int64 topic_fid = 106;
+    int32 need_data_type = 107;
+    int32 session_request_times = 108;
 }

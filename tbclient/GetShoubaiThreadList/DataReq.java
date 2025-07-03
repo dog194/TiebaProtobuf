@@ -9,7 +9,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1434common;
+    public final CommonReq f1441common;
 
     @ProtoField(tag = 3, type = Message.Datatype.INT64)
     public final Long cursor;
@@ -26,7 +26,7 @@ public final class DataReq extends Message {
     public static final class Builder extends Message.Builder<DataReq> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1435common;
+        public CommonReq f1442common;
         public Long cursor;
         public Integer page_size;
         public Long uid;
@@ -39,7 +39,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1435common = dataReq.f1434common;
+            this.f1442common = dataReq.f1441common;
             this.uid = dataReq.uid;
             this.cursor = dataReq.cursor;
             this.page_size = dataReq.page_size;
@@ -54,7 +54,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1434common = builder.f1435common;
+            this.f1441common = builder.f1442common;
             Long l = builder.uid;
             if (l == null) {
                 this.uid = DEFAULT_UID;
@@ -76,7 +76,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1434common = builder.f1435common;
+        this.f1441common = builder.f1442common;
         this.uid = builder.uid;
         this.cursor = builder.cursor;
         this.page_size = builder.page_size;

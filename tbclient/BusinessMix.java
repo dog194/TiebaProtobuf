@@ -5,13 +5,20 @@ import com.squareup.wire.ProtoField;
 
 /* loaded from: classes4.dex */
 public final class BusinessMix extends Message {
+    public static final Integer DEFAULT_CAN_SHOW_SECOND_FLOOR;
+    public static final Double DEFAULT_CTR;
+    public static final Double DEFAULT_ECPM;
     public static final String DEFAULT_PACKAGE_NAME = "";
     public static final String DEFAULT_SCHEME = "";
+    public static final Integer DEFAULT_TOUCH_LEVEL;
     public static final String DEFAULT_TOUCH_TYPE = "";
     public static final String DEFAULT_URL = "";
 
     @ProtoField(tag = 9, type = Message.Datatype.INT32)
     public final Integer can_show_second_floor;
+
+    @ProtoField(tag = 10, type = Message.Datatype.DOUBLE)
+    public final Double ctr;
 
     @ProtoField(tag = 6, type = Message.Datatype.DOUBLE)
     public final Double ecpm;
@@ -38,12 +45,10 @@ public final class BusinessMix extends Message {
     public final String url;
     public static final Integer DEFAULT_MIX_TYPE = 0;
     public static final Integer DEFAULT_JUMP_TYPE = 0;
-    public static final Double DEFAULT_ECPM = Double.valueOf(0.0d);
-    public static final Integer DEFAULT_TOUCH_LEVEL = 0;
-    public static final Integer DEFAULT_CAN_SHOW_SECOND_FLOOR = 0;
 
     public static final class Builder extends Message.Builder<BusinessMix> {
         public Integer can_show_second_floor;
+        public Double ctr;
         public Double ecpm;
         public Integer jump_type;
         public Integer mix_type;
@@ -70,12 +75,21 @@ public final class BusinessMix extends Message {
             this.touch_level = businessMix.touch_level;
             this.touch_type = businessMix.touch_type;
             this.can_show_second_floor = businessMix.can_show_second_floor;
+            this.ctr = businessMix.ctr;
         }
 
         @Override // com.squareup.wire.Message.Builder
         public BusinessMix build(boolean z) {
             return new BusinessMix(this, z);
         }
+    }
+
+    static {
+        Double valueOf = Double.valueOf(0.0d);
+        DEFAULT_ECPM = valueOf;
+        DEFAULT_TOUCH_LEVEL = 0;
+        DEFAULT_CAN_SHOW_SECOND_FLOOR = 0;
+        DEFAULT_CTR = valueOf;
     }
 
     public BusinessMix(Builder builder, boolean z) {
@@ -132,9 +146,15 @@ public final class BusinessMix extends Message {
             Integer num4 = builder.can_show_second_floor;
             if (num4 == null) {
                 this.can_show_second_floor = DEFAULT_CAN_SHOW_SECOND_FLOOR;
-                return;
             } else {
                 this.can_show_second_floor = num4;
+            }
+            Double d2 = builder.ctr;
+            if (d2 == null) {
+                this.ctr = DEFAULT_CTR;
+                return;
+            } else {
+                this.ctr = d2;
                 return;
             }
         }
@@ -147,5 +167,6 @@ public final class BusinessMix extends Message {
         this.touch_level = builder.touch_level;
         this.touch_type = builder.touch_type;
         this.can_show_second_floor = builder.can_show_second_floor;
+        this.ctr = builder.ctr;
     }
 }

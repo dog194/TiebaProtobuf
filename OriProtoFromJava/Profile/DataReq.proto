@@ -11,7 +11,7 @@ message DataReq {
     uint32 pn = 6;
     uint32 rn = 7;
     uint32 has_plist = 8;
-    CommonReq f1500common = 9;
+    CommonReq f1507common = 9;
     uint32 scr_w = 10;
     uint32 scr_h = 11;
     uint32 q_type = 12;

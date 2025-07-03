@@ -4,7 +4,7 @@ import "AppPosInfo.proto";
 import "CommonReq.proto";
 
 message DataReq {
-    CommonReq f1482common = 1;
+    CommonReq f1489common = 1;
     string tab_code = 2;
     string lf_user = 3;
     string lf_user_taskid = 4;

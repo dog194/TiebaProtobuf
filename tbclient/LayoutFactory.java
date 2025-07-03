@@ -22,6 +22,9 @@ public final class LayoutFactory extends Message {
     @ProtoField(tag = 9)
     public final CardFrequency card_expose_frequency;
 
+    @ProtoField(tag = 24)
+    public final DiscussLayout discuss_card;
+
     @ProtoField(tag = 6)
     public final VideoDoubleRowLayout double_row_video;
 
@@ -84,6 +87,7 @@ public final class LayoutFactory extends Message {
         public FeedbackCardLayout bawu_feedback_card;
         public CardFrequency card_click_frequency;
         public CardFrequency card_expose_frequency;
+        public DiscussLayout discuss_card;
         public VideoDoubleRowLayout double_row_video;
         public FeedLayout feed;
         public FeedStaggerLayout feed_stagger_layout;
@@ -135,6 +139,7 @@ public final class LayoutFactory extends Message {
             this.bawu_feedback_card = layoutFactory.bawu_feedback_card;
             this.question_card = layoutFactory.question_card;
             this.feed_stagger_layout = layoutFactory.feed_stagger_layout;
+            this.discuss_card = layoutFactory.discuss_card;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -179,6 +184,7 @@ public final class LayoutFactory extends Message {
             this.bawu_feedback_card = builder.bawu_feedback_card;
             this.question_card = builder.question_card;
             this.feed_stagger_layout = builder.feed_stagger_layout;
+            this.discuss_card = builder.discuss_card;
             return;
         }
         this.layout = builder.layout;
@@ -204,5 +210,6 @@ public final class LayoutFactory extends Message {
         this.bawu_feedback_card = builder.bawu_feedback_card;
         this.question_card = builder.question_card;
         this.feed_stagger_layout = builder.feed_stagger_layout;
+        this.discuss_card = builder.discuss_card;
     }
 }

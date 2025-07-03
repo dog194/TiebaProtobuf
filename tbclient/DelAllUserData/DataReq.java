@@ -10,7 +10,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1340common;
+    public final CommonReq f1347common;
 
     @ProtoField(tag = 2, type = Message.Datatype.INT32)
     public final Integer op_type;
@@ -18,7 +18,7 @@ public final class DataReq extends Message {
     public static final class Builder extends Message.Builder<DataReq> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1341common;
+        public CommonReq f1348common;
         public Integer op_type;
 
         public Builder() {
@@ -29,7 +29,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1341common = dataReq.f1340common;
+            this.f1348common = dataReq.f1347common;
             this.op_type = dataReq.op_type;
         }
 
@@ -42,7 +42,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1340common = builder.f1341common;
+            this.f1347common = builder.f1348common;
             Integer num = builder.op_type;
             if (num == null) {
                 this.op_type = DEFAULT_OP_TYPE;
@@ -52,7 +52,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1340common = builder.f1341common;
+        this.f1347common = builder.f1348common;
         this.op_type = builder.op_type;
     }
 }

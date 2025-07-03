@@ -25,7 +25,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1386common;
+    public final CommonReq f1393common;
 
     public static final class Builder extends Message.Builder<DataReq> {
         public String ad_context_list;
@@ -34,7 +34,7 @@ public final class DataReq extends Message {
         public AppTransmitData app_transmit_data;
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1387common;
+        public CommonReq f1394common;
 
         public Builder() {
         }
@@ -44,7 +44,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1387common = dataReq.f1386common;
+            this.f1394common = dataReq.f1393common;
             this.app_transmit_data = dataReq.app_transmit_data;
             this.ad_place = dataReq.ad_place;
             this.ad_ext_params = dataReq.ad_ext_params;
@@ -60,7 +60,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1386common = builder.f1387common;
+            this.f1393common = builder.f1394common;
             this.app_transmit_data = builder.app_transmit_data;
             String str = builder.ad_place;
             if (str == null) {
@@ -83,7 +83,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1386common = builder.f1387common;
+        this.f1393common = builder.f1394common;
         this.app_transmit_data = builder.app_transmit_data;
         this.ad_place = builder.ad_place;
         this.ad_ext_params = builder.ad_ext_params;

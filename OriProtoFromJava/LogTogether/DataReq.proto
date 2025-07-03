@@ -5,5 +5,5 @@ import "LogTogether/AdReq.proto";
 
 message DataReq {
     repeated AdReq Ad = 1;
-    CommonReq f1478common = 2;
+    CommonReq f1485common = 2;
 }

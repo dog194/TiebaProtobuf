@@ -3,6 +3,6 @@ syntax = "proto3";
 import "CommonReq.proto";
 
 message DataReq {
-    CommonReq f1338common = 1;
+    CommonReq f1345common = 1;
     string tieba_code = 2;
 }

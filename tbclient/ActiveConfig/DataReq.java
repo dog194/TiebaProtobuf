@@ -9,7 +9,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1304common;
+    public final CommonReq f1309common;
 
     @ProtoField(tag = 3, type = Message.Datatype.INT32)
     public final Integer is_first_up;
@@ -22,7 +22,7 @@ public final class DataReq extends Message {
     public static final class Builder extends Message.Builder<DataReq> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1305common;
+        public CommonReq f1310common;
         public Integer is_first_up;
         public Integer is_schema_up;
 
@@ -34,7 +34,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1305common = dataReq.f1304common;
+            this.f1310common = dataReq.f1309common;
             this.is_schema_up = dataReq.is_schema_up;
             this.is_first_up = dataReq.is_first_up;
         }
@@ -48,7 +48,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1304common = builder.f1305common;
+            this.f1309common = builder.f1310common;
             Integer num = builder.is_schema_up;
             if (num == null) {
                 this.is_schema_up = DEFAULT_IS_SCHEMA_UP;
@@ -64,7 +64,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1304common = builder.f1305common;
+        this.f1309common = builder.f1310common;
         this.is_schema_up = builder.is_schema_up;
         this.is_first_up = builder.is_first_up;
     }

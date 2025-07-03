@@ -14,11 +14,14 @@ import tbclient.Zan;
 public final class ReplyList extends Message {
     public static final String DEFAULT_CONTENT = "";
     public static final String DEFAULT_DISPLAY_TEXT = "";
+    public static final String DEFAULT_FIRST_SCHEME = "";
     public static final String DEFAULT_FNAME = "";
     public static final String DEFAULT_ITEM_TYPE = "";
     public static final String DEFAULT_POST_FROM = "";
     public static final String DEFAULT_QUOTE_CONTENT = "";
+    public static final String DEFAULT_SECOND_SCHEME = "";
     public static final String DEFAULT_TARGET_SCHEME = "";
+    public static final String DEFAULT_THIRD_SCHEME = "";
     public static final String DEFAULT_THREAD_IMG_URL = "";
     public static final String DEFAULT_TITLE = "";
 
@@ -31,6 +34,9 @@ public final class ReplyList extends Message {
     @ProtoField(tag = 31, type = Message.Datatype.STRING)
     public final String display_text;
 
+    @ProtoField(tag = 33, type = Message.Datatype.STRING)
+    public final String first_scheme;
+
     @ProtoField(tag = 5, type = Message.Datatype.STRING)
     public final String fname;
 
@@ -42,6 +48,9 @@ public final class ReplyList extends Message {
 
     @ProtoField(tag = 26, type = Message.Datatype.INT32)
     public final Integer is_bjh;
+
+    @ProtoField(tag = 32, type = Message.Datatype.INT32)
+    public final Integer is_filter;
 
     @ProtoField(tag = 7, type = Message.Datatype.UINT32)
     public final Integer is_floor;
@@ -79,11 +88,17 @@ public final class ReplyList extends Message {
     @ProtoField(tag = 9)
     public final User replyer;
 
+    @ProtoField(tag = 34, type = Message.Datatype.STRING)
+    public final String second_scheme;
+
     @ProtoField(tag = 16, type = Message.Datatype.INT32)
     public final Integer server_time;
 
     @ProtoField(tag = 30, type = Message.Datatype.STRING)
     public final String target_scheme;
+
+    @ProtoField(tag = 35, type = Message.Datatype.STRING)
+    public final String third_scheme;
 
     @ProtoField(tag = 25)
     public final User thread_author_user;
@@ -130,15 +145,18 @@ public final class ReplyList extends Message {
     public static final Integer DEFAULT_IS_BJH = 0;
     public static final List<NewFloorInfo> DEFAULT_NEW_FLOOR_INFO = Collections.emptyList();
     public static final Integer DEFAULT_HAS_AGREE = 0;
+    public static final Integer DEFAULT_IS_FILTER = 0;
 
     public static final class Builder extends Message.Builder<ReplyList> {
         public Baijiahao baijiahao;
         public String content;
         public String display_text;
+        public String first_scheme;
         public String fname;
         public Integer has_agree;
         public Integer hide_fname;
         public Integer is_bjh;
+        public Integer is_filter;
         public Integer is_floor;
         public Integer is_share_thread;
         public Integer is_story;
@@ -151,8 +169,10 @@ public final class ReplyList extends Message {
         public Long quote_pid;
         public User quote_user;
         public User replyer;
+        public String second_scheme;
         public Integer server_time;
         public String target_scheme;
+        public String third_scheme;
         public User thread_author_user;
         public Long thread_id;
         public String thread_img_url;
@@ -203,6 +223,10 @@ public final class ReplyList extends Message {
             this.has_agree = replyList.has_agree;
             this.target_scheme = replyList.target_scheme;
             this.display_text = replyList.display_text;
+            this.is_filter = replyList.is_filter;
+            this.first_scheme = replyList.first_scheme;
+            this.second_scheme = replyList.second_scheme;
+            this.third_scheme = replyList.third_scheme;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -367,9 +391,33 @@ public final class ReplyList extends Message {
             String str9 = builder.display_text;
             if (str9 == null) {
                 this.display_text = "";
-                return;
             } else {
                 this.display_text = str9;
+            }
+            Integer num12 = builder.is_filter;
+            if (num12 == null) {
+                this.is_filter = DEFAULT_IS_FILTER;
+            } else {
+                this.is_filter = num12;
+            }
+            String str10 = builder.first_scheme;
+            if (str10 == null) {
+                this.first_scheme = "";
+            } else {
+                this.first_scheme = str10;
+            }
+            String str11 = builder.second_scheme;
+            if (str11 == null) {
+                this.second_scheme = "";
+            } else {
+                this.second_scheme = str11;
+            }
+            String str12 = builder.third_scheme;
+            if (str12 == null) {
+                this.third_scheme = "";
+                return;
+            } else {
+                this.third_scheme = str12;
                 return;
             }
         }
@@ -404,5 +452,9 @@ public final class ReplyList extends Message {
         this.has_agree = builder.has_agree;
         this.target_scheme = builder.target_scheme;
         this.display_text = builder.display_text;
+        this.is_filter = builder.is_filter;
+        this.first_scheme = builder.first_scheme;
+        this.second_scheme = builder.second_scheme;
+        this.third_scheme = builder.third_scheme;
     }
 }

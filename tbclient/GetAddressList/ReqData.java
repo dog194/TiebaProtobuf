@@ -10,7 +10,7 @@ public final class ReqData extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 2)
-    public final CommonReq f1362common;
+    public final CommonReq f1369common;
 
     @ProtoField(tag = 1, type = Message.Datatype.INT32)
     public final Integer timestamp;
@@ -18,7 +18,7 @@ public final class ReqData extends Message {
     public static final class Builder extends Message.Builder<ReqData> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1363common;
+        public CommonReq f1370common;
         public Integer timestamp;
 
         public Builder() {
@@ -30,7 +30,7 @@ public final class ReqData extends Message {
                 return;
             }
             this.timestamp = reqData.timestamp;
-            this.f1363common = reqData.f1362common;
+            this.f1370common = reqData.f1369common;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -48,10 +48,10 @@ public final class ReqData extends Message {
             } else {
                 this.timestamp = num;
             }
-            this.f1362common = builder.f1363common;
+            this.f1369common = builder.f1370common;
             return;
         }
         this.timestamp = builder.timestamp;
-        this.f1362common = builder.f1363common;
+        this.f1369common = builder.f1370common;
     }
 }

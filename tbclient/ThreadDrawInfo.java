@@ -20,6 +20,9 @@ public final class ThreadDrawInfo extends Message {
     @ProtoField(tag = 4, type = Message.Datatype.UINT32)
     public final Integer join_status;
 
+    @ProtoField(tag = 7, type = Message.Datatype.UINT32)
+    public final Integer lottery_type;
+
     @ProtoField(tag = 5, type = Message.Datatype.UINT32)
     public final Integer open_status;
 
@@ -31,12 +34,14 @@ public final class ThreadDrawInfo extends Message {
     public static final Integer DEFAULT_JOIN_STATUS = 0;
     public static final Integer DEFAULT_OPEN_STATUS = 0;
     public static final Long DEFAULT_OPEN_TIME = 0L;
+    public static final Integer DEFAULT_LOTTERY_TYPE = 0;
 
     public static final class Builder extends Message.Builder<ThreadDrawInfo> {
         public Integer audit_status;
         public Long draw_id;
         public List<ThreadDrawPrize> draw_prize;
         public Integer join_status;
+        public Integer lottery_type;
         public Integer open_status;
         public Long open_time;
 
@@ -54,6 +59,7 @@ public final class ThreadDrawInfo extends Message {
             this.join_status = threadDrawInfo.join_status;
             this.open_status = threadDrawInfo.open_status;
             this.open_time = threadDrawInfo.open_time;
+            this.lottery_type = threadDrawInfo.lottery_type;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -98,9 +104,15 @@ public final class ThreadDrawInfo extends Message {
             Long l2 = builder.open_time;
             if (l2 == null) {
                 this.open_time = DEFAULT_OPEN_TIME;
-                return;
             } else {
                 this.open_time = l2;
+            }
+            Integer num4 = builder.lottery_type;
+            if (num4 == null) {
+                this.lottery_type = DEFAULT_LOTTERY_TYPE;
+                return;
+            } else {
+                this.lottery_type = num4;
                 return;
             }
         }
@@ -110,5 +122,6 @@ public final class ThreadDrawInfo extends Message {
         this.join_status = builder.join_status;
         this.open_status = builder.open_status;
         this.open_time = builder.open_time;
+        this.lottery_type = builder.lottery_type;
     }
 }

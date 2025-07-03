@@ -9,7 +9,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1550common;
+    public final CommonReq f1557common;
 
     @ProtoField(tag = 4, type = Message.Datatype.INT32)
     public final Integer mute_type;
@@ -26,7 +26,7 @@ public final class DataReq extends Message {
     public static final class Builder extends Message.Builder<DataReq> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1551common;
+        public CommonReq f1558common;
         public Integer mute_type;
         public Long user_id_f;
         public Long user_id_t;
@@ -39,7 +39,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1551common = dataReq.f1550common;
+            this.f1558common = dataReq.f1557common;
             this.user_id_f = dataReq.user_id_f;
             this.user_id_t = dataReq.user_id_t;
             this.mute_type = dataReq.mute_type;
@@ -54,7 +54,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1550common = builder.f1551common;
+            this.f1557common = builder.f1558common;
             Long l = builder.user_id_f;
             if (l == null) {
                 this.user_id_f = DEFAULT_USER_ID_F;
@@ -76,7 +76,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1550common = builder.f1551common;
+        this.f1557common = builder.f1558common;
         this.user_id_f = builder.user_id_f;
         this.user_id_t = builder.user_id_t;
         this.mute_type = builder.mute_type;

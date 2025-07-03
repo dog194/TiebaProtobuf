@@ -104,7 +104,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 25)
-    public final CommonReq f1492common;
+    public final CommonReq f1499common;
 
     @ProtoField(tag = 42, type = Message.Datatype.STRING)
     public final String da_idfa;
@@ -202,6 +202,9 @@ public final class DataReq extends Message {
     @ProtoField(tag = 24, type = Message.Datatype.STRING)
     public final String msg_click;
 
+    @ProtoField(tag = 107, type = Message.Datatype.INT32)
+    public final Integer need_data_type;
+
     @ProtoField(tag = 59, type = Message.Datatype.INT32)
     public final Integer need_log;
 
@@ -282,6 +285,9 @@ public final class DataReq extends Message {
 
     @ProtoField(tag = 84, type = Message.Datatype.STRING)
     public final String search_query;
+
+    @ProtoField(tag = 108, type = Message.Datatype.INT32)
+    public final Integer session_request_times;
 
     @ProtoField(tag = 61, type = Message.Datatype.STRING)
     public final String shoubai_cuid;
@@ -393,6 +399,8 @@ public final class DataReq extends Message {
     public static final Long DEFAULT_TOP_PID = 0L;
     public static final Long DEFAULT_TOPIC_ID = 0L;
     public static final Long DEFAULT_TOPIC_FID = 0L;
+    public static final Integer DEFAULT_NEED_DATA_TYPE = 0;
+    public static final Integer DEFAULT_SESSION_REQUEST_TIMES = 0;
 
     public static final class Builder extends Message.Builder<DataReq> {
         public String ad_bear_pb_banner;
@@ -415,7 +423,7 @@ public final class DataReq extends Message {
         public String come_from;
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1493common;
+        public CommonReq f1500common;
         public String da_idfa;
         public String eqid;
         public String feed_nid;
@@ -448,6 +456,7 @@ public final class DataReq extends Message {
         public Integer message_id;
         public String mount_bot_uk;
         public String msg_click;
+        public Integer need_data_type;
         public Integer need_log;
         public Integer need_repost_recommend_forum;
         public String obj_locate;
@@ -475,6 +484,7 @@ public final class DataReq extends Message {
         public Integer scr_h;
         public Integer scr_w;
         public String search_query;
+        public Integer session_request_times;
         public String shoubai_cuid;
         public Integer similar_from;
         public Integer source_type;
@@ -527,7 +537,7 @@ public final class DataReq extends Message {
             this.arround = dataReq.arround;
             this.last = dataReq.last;
             this.msg_click = dataReq.msg_click;
-            this.f1493common = dataReq.f1492common;
+            this.f1500common = dataReq.f1499common;
             this.lastids = dataReq.lastids;
             this.st_from = dataReq.st_from;
             this.st_link = dataReq.st_link;
@@ -600,6 +610,8 @@ public final class DataReq extends Message {
             this.ad_external_info = dataReq.ad_external_info;
             this.topic_id = dataReq.topic_id;
             this.topic_fid = dataReq.topic_fid;
+            this.need_data_type = dataReq.need_data_type;
+            this.session_request_times = dataReq.session_request_times;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -755,7 +767,7 @@ public final class DataReq extends Message {
             } else {
                 this.msg_click = str2;
             }
-            this.f1492common = builder.f1493common;
+            this.f1499common = builder.f1500common;
             String str3 = builder.lastids;
             if (str3 == null) {
                 this.lastids = "";
@@ -1165,9 +1177,21 @@ public final class DataReq extends Message {
             Long l13 = builder.topic_fid;
             if (l13 == null) {
                 this.topic_fid = DEFAULT_TOPIC_FID;
-                return;
             } else {
                 this.topic_fid = l13;
+            }
+            Integer num41 = builder.need_data_type;
+            if (num41 == null) {
+                this.need_data_type = DEFAULT_NEED_DATA_TYPE;
+            } else {
+                this.need_data_type = num41;
+            }
+            Integer num42 = builder.session_request_times;
+            if (num42 == null) {
+                this.session_request_times = DEFAULT_SESSION_REQUEST_TIMES;
+                return;
+            } else {
+                this.session_request_times = num42;
                 return;
             }
         }
@@ -1195,7 +1219,7 @@ public final class DataReq extends Message {
         this.arround = builder.arround;
         this.last = builder.last;
         this.msg_click = builder.msg_click;
-        this.f1492common = builder.f1493common;
+        this.f1499common = builder.f1500common;
         this.lastids = builder.lastids;
         this.st_from = builder.st_from;
         this.st_link = builder.st_link;
@@ -1268,5 +1292,7 @@ public final class DataReq extends Message {
         this.ad_external_info = builder.ad_external_info;
         this.topic_id = builder.topic_id;
         this.topic_fid = builder.topic_fid;
+        this.need_data_type = builder.need_data_type;
+        this.session_request_times = builder.session_request_times;
     }
 }

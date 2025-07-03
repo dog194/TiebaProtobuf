@@ -4,7 +4,7 @@ import "CommonReq.proto";
 
 message DataReq {
     int64 user_id = 1;
-    CommonReq f1552common = 2;
+    CommonReq f1559common = 2;
     int32 mute_type = 3;
     uint32 pn = 4;
     uint32 rn = 5;

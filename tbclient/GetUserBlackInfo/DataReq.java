@@ -13,13 +13,13 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1456common;
+    public final CommonReq f1463common;
 
     public static final class Builder extends Message.Builder<DataReq> {
         public Long black_uid;
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1457common;
+        public CommonReq f1464common;
 
         public Builder() {
         }
@@ -29,7 +29,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1457common = dataReq.f1456common;
+            this.f1464common = dataReq.f1463common;
             this.black_uid = dataReq.black_uid;
         }
 
@@ -42,7 +42,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1456common = builder.f1457common;
+            this.f1463common = builder.f1464common;
             Long l = builder.black_uid;
             if (l == null) {
                 this.black_uid = DEFAULT_BLACK_UID;
@@ -52,7 +52,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1456common = builder.f1457common;
+        this.f1463common = builder.f1464common;
         this.black_uid = builder.black_uid;
     }
 }

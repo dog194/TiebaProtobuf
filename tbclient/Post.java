@@ -21,6 +21,7 @@ public final class Post extends Message {
     public static final String DEFAULT_RUMOR_SOURCE_IMG = "";
     public static final String DEFAULT_TIME_EX = "";
     public static final String DEFAULT_TITLE = "";
+    public static final String DEFAULT_TMONEY = "";
     public static final String DEFAULT_TOUTIAO_CARD_TAG = "";
     public static final String DEFAULT_TOUTIAO_CARD_TAG_COLOR = "";
     public static final String DEFAULT_VOTE_CRYPT = "";
@@ -54,6 +55,12 @@ public final class Post extends Message {
 
     @ProtoField(tag = 19, type = Message.Datatype.INT64)
     public final Long author_id;
+
+    @ProtoField(tag = 90)
+    public final BdtSearchInfo bdt_search_info;
+
+    @ProtoField(tag = 91, type = Message.Datatype.INT32)
+    public final Integer bdt_user_adopt;
 
     @ProtoField(tag = 17, type = Message.Datatype.STRING)
     public final String bimg_url;
@@ -271,6 +278,9 @@ public final class Post extends Message {
     @ProtoField(tag = 2, type = Message.Datatype.STRING)
     public final String title;
 
+    @ProtoField(tag = 92, type = Message.Datatype.STRING)
+    public final String tmoney;
+
     @ProtoField(tag = 70, type = Message.Datatype.STRING)
     public final String toutiao_card_tag;
 
@@ -323,6 +333,7 @@ public final class Post extends Message {
     public static final List<FeedHeadSymbol> DEFAULT_HEAD_EXTRA_INFO = Collections.emptyList();
     public static final List<PbContent> DEFAULT_PIC_CONTENT = Collections.emptyList();
     public static final List<PbContent> DEFAULT_NO_PIC_CONTENT = Collections.emptyList();
+    public static final Integer DEFAULT_BDT_USER_ADOPT = 0;
 
     public static final class Builder extends Message.Builder<Post> {
         public ActPost act_post;
@@ -335,6 +346,8 @@ public final class Post extends Message {
         public List<String> arr_video;
         public User author;
         public Long author_id;
+        public BdtSearchInfo bdt_search_info;
+        public Integer bdt_user_adopt;
         public String bimg_url;
         public String bot_reply_content;
         public List<BotReplyContent> bot_reply_content_list;
@@ -407,6 +420,7 @@ public final class Post extends Message {
         public Integer time;
         public String time_ex;
         public String title;
+        public String tmoney;
         public String toutiao_card_tag;
         public String toutiao_card_tag_color;
         public TPointPost tpoint_post;
@@ -510,6 +524,9 @@ public final class Post extends Message {
             this.ios_b_url = post.ios_b_url;
             this.special_post = post.special_post;
             this.footer = post.footer;
+            this.bdt_search_info = post.bdt_search_info;
+            this.bdt_user_adopt = post.bdt_user_adopt;
+            this.tmoney = post.tmoney;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -866,9 +883,22 @@ public final class Post extends Message {
             String str17 = builder.footer;
             if (str17 == null) {
                 this.footer = "";
-                return;
             } else {
                 this.footer = str17;
+            }
+            this.bdt_search_info = builder.bdt_search_info;
+            Integer num22 = builder.bdt_user_adopt;
+            if (num22 == null) {
+                this.bdt_user_adopt = DEFAULT_BDT_USER_ADOPT;
+            } else {
+                this.bdt_user_adopt = num22;
+            }
+            String str18 = builder.tmoney;
+            if (str18 == null) {
+                this.tmoney = "";
+                return;
+            } else {
+                this.tmoney = str18;
                 return;
             }
         }
@@ -960,5 +990,8 @@ public final class Post extends Message {
         this.ios_b_url = builder.ios_b_url;
         this.special_post = builder.special_post;
         this.footer = builder.footer;
+        this.bdt_search_info = builder.bdt_search_info;
+        this.bdt_user_adopt = builder.bdt_user_adopt;
+        this.tmoney = builder.tmoney;
     }
 }

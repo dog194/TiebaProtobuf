@@ -9,7 +9,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1348common;
+    public final CommonReq f1355common;
 
     @ProtoField(tag = 6, type = Message.Datatype.UINT64)
     public final Long excid;
@@ -42,7 +42,7 @@ public final class DataReq extends Message {
     public static final class Builder extends Message.Builder<DataReq> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1349common;
+        public CommonReq f1356common;
         public Long excid;
         public Long q_type;
         public Long scr_dip;
@@ -59,7 +59,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1349common = dataReq.f1348common;
+            this.f1356common = dataReq.f1355common;
             this.scr_w = dataReq.scr_w;
             this.scr_h = dataReq.scr_h;
             this.scr_dip = dataReq.scr_dip;
@@ -78,7 +78,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1348common = builder.f1349common;
+            this.f1355common = builder.f1356common;
             Long l = builder.scr_w;
             if (l == null) {
                 this.scr_w = DEFAULT_SCR_W;
@@ -124,7 +124,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1348common = builder.f1349common;
+        this.f1355common = builder.f1356common;
         this.scr_w = builder.scr_w;
         this.scr_h = builder.scr_h;
         this.scr_dip = builder.scr_dip;

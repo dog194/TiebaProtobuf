@@ -23,7 +23,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1498common;
+    public final CommonReq f1505common;
 
     @ProtoField(tag = 13, type = Message.Datatype.UINT32)
     public final Integer currency;
@@ -58,7 +58,7 @@ public final class DataReq extends Message {
         public String benefit_username;
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1499common;
+        public CommonReq f1506common;
         public Integer currency;
         public Integer gift_id;
         public Integer num;
@@ -74,7 +74,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1499common = dataReq.f1498common;
+            this.f1506common = dataReq.f1505common;
             this.scene_from = dataReq.scene_from;
             this.gift_id = dataReq.gift_id;
             this.benefit_userid = dataReq.benefit_userid;
@@ -96,7 +96,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1498common = builder.f1499common;
+            this.f1505common = builder.f1506common;
             String str = builder.scene_from;
             if (str == null) {
                 this.scene_from = "";
@@ -160,7 +160,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1498common = builder.f1499common;
+        this.f1505common = builder.f1506common;
         this.scene_from = builder.scene_from;
         this.gift_id = builder.gift_id;
         this.benefit_userid = builder.benefit_userid;

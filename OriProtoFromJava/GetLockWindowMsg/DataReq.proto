@@ -3,7 +3,7 @@ syntax = "proto3";
 import "CommonReq.proto";
 
 message DataReq {
-    CommonReq f1404common = 1;
+    CommonReq f1411common = 1;
     uint64 tid = 2;
     uint64 task_id = 3;
 }

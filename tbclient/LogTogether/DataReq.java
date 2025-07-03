@@ -15,13 +15,13 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 2)
-    public final CommonReq f1478common;
+    public final CommonReq f1485common;
 
     public static final class Builder extends Message.Builder<DataReq> {
         public List<AdReq> Ad;
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1479common;
+        public CommonReq f1486common;
 
         public Builder() {
         }
@@ -32,7 +32,7 @@ public final class DataReq extends Message {
                 return;
             }
             this.Ad = Message.copyOf(dataReq.Ad);
-            this.f1479common = dataReq.f1478common;
+            this.f1486common = dataReq.f1485common;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -50,10 +50,10 @@ public final class DataReq extends Message {
             } else {
                 this.Ad = Message.immutableCopyOf(list);
             }
-            this.f1478common = builder.f1479common;
+            this.f1485common = builder.f1486common;
             return;
         }
         this.Ad = Message.immutableCopyOf(builder.Ad);
-        this.f1478common = builder.f1479common;
+        this.f1485common = builder.f1486common;
     }
 }

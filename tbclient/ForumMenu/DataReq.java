@@ -10,7 +10,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 5)
-    public final CommonReq f1354common;
+    public final CommonReq f1361common;
 
     @ProtoField(tag = 4, type = Message.Datatype.STRING)
     public final String cookie;
@@ -30,7 +30,7 @@ public final class DataReq extends Message {
     public static final class Builder extends Message.Builder<DataReq> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1355common;
+        public CommonReq f1362common;
         public String cookie;
         public Integer forum_id;
         public Integer st_param;
@@ -48,7 +48,7 @@ public final class DataReq extends Message {
             this.forum_id = dataReq.forum_id;
             this.st_param = dataReq.st_param;
             this.cookie = dataReq.cookie;
-            this.f1355common = dataReq.f1354common;
+            this.f1362common = dataReq.f1361common;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -84,13 +84,13 @@ public final class DataReq extends Message {
             } else {
                 this.cookie = str;
             }
-            this.f1354common = builder.f1355common;
+            this.f1361common = builder.f1362common;
             return;
         }
         this.update_time = builder.update_time;
         this.forum_id = builder.forum_id;
         this.st_param = builder.st_param;
         this.cookie = builder.cookie;
-        this.f1354common = builder.f1355common;
+        this.f1361common = builder.f1362common;
     }
 }

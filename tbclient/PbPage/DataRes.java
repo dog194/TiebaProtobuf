@@ -59,6 +59,9 @@ public final class DataRes extends Message {
     public static final String DEFAULT_RETURN_PAGE = "";
     public static final String DEFAULT_SEARCH_QUERY = "";
 
+    @ProtoField(tag = 107)
+    public final AdFilter ad_filter;
+
     @ProtoField(tag = 88, type = Message.Datatype.INT32)
     public final Integer ad_show_select;
 
@@ -412,6 +415,7 @@ public final class DataRes extends Message {
     public static final List<InputHintItem> DEFAULT_INPUT_HINT = Collections.emptyList();
 
     public static final class Builder extends Message.Builder<DataRes> {
+        public AdFilter ad_filter;
         public Integer ad_show_select;
         public AddPost add_post;
         public AichatBotCard aichat_bot_card;
@@ -629,6 +633,7 @@ public final class DataRes extends Message {
             this.mutli_aichat_bot_card = dataRes.mutli_aichat_bot_card;
             this.setting_info = dataRes.setting_info;
             this.shop_goods_info = dataRes.shop_goods_info;
+            this.ad_filter = dataRes.ad_filter;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -984,6 +989,7 @@ public final class DataRes extends Message {
             this.mutli_aichat_bot_card = builder.mutli_aichat_bot_card;
             this.setting_info = builder.setting_info;
             this.shop_goods_info = builder.shop_goods_info;
+            this.ad_filter = builder.ad_filter;
             return;
         }
         this.user = builder.user;
@@ -1090,5 +1096,6 @@ public final class DataRes extends Message {
         this.mutli_aichat_bot_card = builder.mutli_aichat_bot_card;
         this.setting_info = builder.setting_info;
         this.shop_goods_info = builder.shop_goods_info;
+        this.ad_filter = builder.ad_filter;
     }
 }

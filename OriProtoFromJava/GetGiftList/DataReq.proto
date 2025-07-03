@@ -4,6 +4,6 @@ import "CommonReq.proto";
 
 message DataReq {
     string scene_from = 1;
-    CommonReq f1394common = 2;
+    CommonReq f1401common = 2;
     uint64 benefit_userid = 3;
 }

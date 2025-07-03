@@ -4,5 +4,5 @@ import "CommonReq.proto";
 
 message ReqData {
     int32 timestamp = 1;
-    CommonReq f1362common = 2;
+    CommonReq f1369common = 2;
 }

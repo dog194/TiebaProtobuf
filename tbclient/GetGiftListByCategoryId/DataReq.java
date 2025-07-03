@@ -13,13 +13,13 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 2)
-    public final CommonReq f1396common;
+    public final CommonReq f1403common;
 
     public static final class Builder extends Message.Builder<DataReq> {
         public Integer category_id;
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1397common;
+        public CommonReq f1404common;
 
         public Builder() {
         }
@@ -30,7 +30,7 @@ public final class DataReq extends Message {
                 return;
             }
             this.category_id = dataReq.category_id;
-            this.f1397common = dataReq.f1396common;
+            this.f1404common = dataReq.f1403common;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -48,10 +48,10 @@ public final class DataReq extends Message {
             } else {
                 this.category_id = num;
             }
-            this.f1396common = builder.f1397common;
+            this.f1403common = builder.f1404common;
             return;
         }
         this.category_id = builder.category_id;
-        this.f1396common = builder.f1397common;
+        this.f1403common = builder.f1404common;
     }
 }

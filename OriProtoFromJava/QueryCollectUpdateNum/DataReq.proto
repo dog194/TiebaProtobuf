@@ -4,5 +4,5 @@ import "CommonReq.proto";
 
 message DataReq {
     uint32 collect_mark = 1;
-    CommonReq f1506common = 2;
+    CommonReq f1513common = 2;
 }

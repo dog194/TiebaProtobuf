@@ -10,7 +10,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1398common;
+    public final CommonReq f1405common;
 
     @ProtoField(tag = 2, type = Message.Datatype.STRING)
     public final String history;
@@ -18,7 +18,7 @@ public final class DataReq extends Message {
     public static final class Builder extends Message.Builder<DataReq> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1399common;
+        public CommonReq f1406common;
         public String history;
 
         public Builder() {
@@ -29,7 +29,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1399common = dataReq.f1398common;
+            this.f1406common = dataReq.f1405common;
             this.history = dataReq.history;
         }
 
@@ -42,7 +42,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1398common = builder.f1399common;
+            this.f1405common = builder.f1406common;
             String str = builder.history;
             if (str == null) {
                 this.history = "";
@@ -52,7 +52,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1398common = builder.f1399common;
+        this.f1405common = builder.f1406common;
         this.history = builder.history;
     }
 }

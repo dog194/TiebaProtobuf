@@ -11,7 +11,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1528common;
+    public final CommonReq f1535common;
 
     @ProtoField(tag = 2, type = Message.Datatype.UINT64)
     public final Long props_id;
@@ -22,7 +22,7 @@ public final class DataReq extends Message {
     public static final class Builder extends Message.Builder<DataReq> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1529common;
+        public CommonReq f1536common;
         public Long props_id;
         public Integer type;
 
@@ -34,7 +34,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1529common = dataReq.f1528common;
+            this.f1536common = dataReq.f1535common;
             this.props_id = dataReq.props_id;
             this.type = dataReq.type;
         }
@@ -48,7 +48,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1528common = builder.f1529common;
+            this.f1535common = builder.f1536common;
             Long l = builder.props_id;
             if (l == null) {
                 this.props_id = DEFAULT_PROPS_ID;
@@ -64,7 +64,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1528common = builder.f1529common;
+        this.f1535common = builder.f1536common;
         this.props_id = builder.props_id;
         this.type = builder.type;
     }

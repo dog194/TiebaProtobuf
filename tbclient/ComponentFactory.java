@@ -50,6 +50,9 @@ public final class ComponentFactory extends Message {
     @ProtoField(tag = 39)
     public final FeedDanmaku feed_danmaku;
 
+    @ProtoField(tag = 57)
+    public final FeedDiscussComponent feed_discuss;
+
     @ProtoField(tag = 10)
     public final FeedEntrybarComponent feed_entrybar;
 
@@ -85,6 +88,9 @@ public final class ComponentFactory extends Message {
 
     @ProtoField(tag = 12)
     public final FeedLiveComponent feed_live;
+
+    @ProtoField(tag = 56)
+    public final LoopAvatarWithBtnComponent feed_loop_avatar_with_btn;
 
     @ProtoField(tag = 50)
     public final FeedLoopReplyComponent feed_loop_reply;
@@ -187,6 +193,7 @@ public final class ComponentFactory extends Message {
         public FeedButtonComponent feed_button;
         public FeedConfigurableHeadComponent feed_configurable_head;
         public FeedDanmaku feed_danmaku;
+        public FeedDiscussComponent feed_discuss;
         public FeedEntrybarComponent feed_entrybar;
         public ScoreFeedbackComponent feed_feedback_icon_list;
         public FeedFlipPage feed_flip_page;
@@ -199,6 +206,7 @@ public final class ComponentFactory extends Message {
         public FeedItem feed_item;
         public FeedLinkComponent feed_link;
         public FeedLiveComponent feed_live;
+        public LoopAvatarWithBtnComponent feed_loop_avatar_with_btn;
         public FeedLoopReplyComponent feed_loop_reply;
         public FeedMixComponent feed_mix;
         public FeedHeadComponent feed_mount;
@@ -291,6 +299,8 @@ public final class ComponentFactory extends Message {
             this.feed_recomtag_staggered = componentFactory.feed_recomtag_staggered;
             this.feed_interaction = componentFactory.feed_interaction;
             this.feed_tips = componentFactory.feed_tips;
+            this.feed_loop_avatar_with_btn = componentFactory.feed_loop_avatar_with_btn;
+            this.feed_discuss = componentFactory.feed_discuss;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -371,6 +381,8 @@ public final class ComponentFactory extends Message {
             this.feed_recomtag_staggered = builder.feed_recomtag_staggered;
             this.feed_interaction = builder.feed_interaction;
             this.feed_tips = builder.feed_tips;
+            this.feed_loop_avatar_with_btn = builder.feed_loop_avatar_with_btn;
+            this.feed_discuss = builder.feed_discuss;
             return;
         }
         this.component = builder.component;
@@ -427,5 +439,7 @@ public final class ComponentFactory extends Message {
         this.feed_recomtag_staggered = builder.feed_recomtag_staggered;
         this.feed_interaction = builder.feed_interaction;
         this.feed_tips = builder.feed_tips;
+        this.feed_loop_avatar_with_btn = builder.feed_loop_avatar_with_btn;
+        this.feed_discuss = builder.feed_discuss;
     }
 }

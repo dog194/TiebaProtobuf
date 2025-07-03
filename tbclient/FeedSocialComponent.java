@@ -7,12 +7,16 @@ import java.util.List;
 
 /* loaded from: classes4.dex */
 public final class FeedSocialComponent extends Message {
+    public static final String DEFAULT_COMMENT_SCHEME = "";
 
     @ProtoField(tag = 1)
     public final Agree agree;
 
     @ProtoField(tag = 2, type = Message.Datatype.INT32)
     public final Integer comment_num;
+
+    @ProtoField(tag = 11, type = Message.Datatype.STRING)
+    public final String comment_scheme;
 
     @ProtoField(tag = 5, type = Message.Datatype.UINT64)
     public final Long fid;
@@ -50,6 +54,7 @@ public final class FeedSocialComponent extends Message {
     public static final class Builder extends Message.Builder<FeedSocialComponent> {
         public Agree agree;
         public Integer comment_num;
+        public String comment_scheme;
         public Long fid;
         public Long first_post_id;
         public Integer is_grayreply;
@@ -77,6 +82,7 @@ public final class FeedSocialComponent extends Message {
             this.is_grayshare = feedSocialComponent.is_grayshare;
             this.is_store = feedSocialComponent.is_store;
             this.first_post_id = feedSocialComponent.first_post_id;
+            this.comment_scheme = feedSocialComponent.comment_scheme;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -140,9 +146,15 @@ public final class FeedSocialComponent extends Message {
             Long l3 = builder.first_post_id;
             if (l3 == null) {
                 this.first_post_id = DEFAULT_FIRST_POST_ID;
-                return;
             } else {
                 this.first_post_id = l3;
+            }
+            String str = builder.comment_scheme;
+            if (str == null) {
+                this.comment_scheme = "";
+                return;
+            } else {
+                this.comment_scheme = str;
                 return;
             }
         }
@@ -156,5 +168,6 @@ public final class FeedSocialComponent extends Message {
         this.is_grayshare = builder.is_grayshare;
         this.is_store = builder.is_store;
         this.first_post_id = builder.first_post_id;
+        this.comment_scheme = builder.comment_scheme;
     }
 }

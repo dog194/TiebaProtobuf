@@ -10,7 +10,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 2)
-    public final CommonReq f1382common;
+    public final CommonReq f1389common;
 
     @ProtoField(tag = 1, type = Message.Datatype.STRING)
     public final String type;
@@ -18,7 +18,7 @@ public final class DataReq extends Message {
     public static final class Builder extends Message.Builder<DataReq> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1383common;
+        public CommonReq f1390common;
         public String type;
 
         public Builder() {
@@ -30,7 +30,7 @@ public final class DataReq extends Message {
                 return;
             }
             this.type = dataReq.type;
-            this.f1383common = dataReq.f1382common;
+            this.f1390common = dataReq.f1389common;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -48,10 +48,10 @@ public final class DataReq extends Message {
             } else {
                 this.type = str;
             }
-            this.f1382common = builder.f1383common;
+            this.f1389common = builder.f1390common;
             return;
         }
         this.type = builder.type;
-        this.f1382common = builder.f1383common;
+        this.f1389common = builder.f1390common;
     }
 }

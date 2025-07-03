@@ -11,7 +11,7 @@ public final class ReqData extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 4)
-    public final CommonReq f1516common;
+    public final CommonReq f1523common;
 
     @ProtoField(tag = 1, type = Message.Datatype.INT64)
     public final Long friend_id;
@@ -22,7 +22,7 @@ public final class ReqData extends Message {
     public static final class Builder extends Message.Builder<ReqData> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1517common;
+        public CommonReq f1524common;
         public Long friend_id;
         public String message;
 
@@ -36,7 +36,7 @@ public final class ReqData extends Message {
             }
             this.friend_id = reqData.friend_id;
             this.message = reqData.message;
-            this.f1517common = reqData.f1516common;
+            this.f1524common = reqData.f1523common;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -60,11 +60,11 @@ public final class ReqData extends Message {
             } else {
                 this.message = str;
             }
-            this.f1516common = builder.f1517common;
+            this.f1523common = builder.f1524common;
             return;
         }
         this.friend_id = builder.friend_id;
         this.message = builder.message;
-        this.f1516common = builder.f1517common;
+        this.f1523common = builder.f1524common;
     }
 }

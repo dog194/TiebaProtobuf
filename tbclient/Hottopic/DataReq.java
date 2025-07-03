@@ -15,7 +15,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1472common;
+    public final CommonReq f1479common;
 
     @ProtoField(tag = 9, type = Message.Datatype.INT64)
     public final Long fid;
@@ -67,7 +67,7 @@ public final class DataReq extends Message {
         public Integer call_from;
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1473common;
+        public CommonReq f1480common;
         public Long fid;
         public String first_dir;
         public Integer is_video_topic;
@@ -89,7 +89,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1473common = dataReq.f1472common;
+            this.f1480common = dataReq.f1479common;
             this.topic_id = dataReq.topic_id;
             this.topic_name = dataReq.topic_name;
             this.scr_w = dataReq.scr_w;
@@ -114,7 +114,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1472common = builder.f1473common;
+            this.f1479common = builder.f1480common;
             Long l = builder.topic_id;
             if (l == null) {
                 this.topic_id = DEFAULT_TOPIC_ID;
@@ -196,7 +196,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1472common = builder.f1473common;
+        this.f1479common = builder.f1480common;
         this.topic_id = builder.topic_id;
         this.topic_name = builder.topic_name;
         this.scr_w = builder.scr_w;

@@ -12,7 +12,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1440common;
+    public final CommonReq f1447common;
 
     @ProtoField(tag = 3, type = Message.Datatype.INT64)
     public final Long fid;
@@ -34,7 +34,7 @@ public final class DataReq extends Message {
     public static final class Builder extends Message.Builder<DataReq> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1441common;
+        public CommonReq f1448common;
         public Long fid;
         public String first_dir;
         public Integer is_video_topic;
@@ -49,7 +49,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1441common = dataReq.f1440common;
+            this.f1448common = dataReq.f1447common;
             this.prefix = dataReq.prefix;
             this.fid = dataReq.fid;
             this.first_dir = dataReq.first_dir;
@@ -66,7 +66,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1440common = builder.f1441common;
+            this.f1447common = builder.f1448common;
             String str = builder.prefix;
             if (str == null) {
                 this.prefix = "";
@@ -100,7 +100,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1440common = builder.f1441common;
+        this.f1447common = builder.f1448common;
         this.prefix = builder.prefix;
         this.fid = builder.fid;
         this.first_dir = builder.first_dir;

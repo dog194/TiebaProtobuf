@@ -20,6 +20,7 @@ public final class ThreadInfo extends Message {
     public static final String DEFAULT_DISABLE_SHARE_TOAST = "";
     public static final String DEFAULT_ECOM = "";
     public static final String DEFAULT_EXPOSURE_MONITOR_URL = "";
+    public static final String DEFAULT_FEED_NID = "";
     public static final String DEFAULT_FNAME = "";
     public static final String DEFAULT_FORUM_USER_LIVE_MSG = "";
     public static final String DEFAULT_FROM = "";
@@ -211,6 +212,9 @@ public final class ThreadInfo extends Message {
 
     @ProtoField(label = Message.Label.REPEATED, tag = 90)
     public final List<TailInfo> ext_tails;
+
+    @ProtoField(tag = 257, type = Message.Datatype.STRING)
+    public final String feed_nid;
 
     @ProtoField(tag = 27, type = Message.Datatype.INT64)
     public final Long fid;
@@ -776,6 +780,9 @@ public final class ThreadInfo extends Message {
     @ProtoField(tag = 37, type = Message.Datatype.STRING)
     public final String video_mobile_url;
 
+    @ProtoField(tag = 259)
+    public final ThreadVideoOtherInfo video_other_info;
+
     @ProtoField(tag = 157)
     public final VideoDesc video_segment;
 
@@ -1183,6 +1190,8 @@ public final class ThreadInfo extends Message {
             this.tiebaplus_da_type_click = builder.tiebaplus_da_type_click;
             this.video_card = builder.video_card;
             this.poll_style = builder.poll_style;
+            this.feed_nid = builder.feed_nid;
+            this.video_other_info = builder.video_other_info;
             return;
         }
         Long l = builder.id;
@@ -2342,6 +2351,13 @@ public final class ThreadInfo extends Message {
         } else {
             this.poll_style = num87;
         }
+        String str56 = builder.feed_nid;
+        if (str56 == null) {
+            this.feed_nid = "";
+        } else {
+            this.feed_nid = str56;
+        }
+        this.video_other_info = builder.video_other_info;
     }
 
     public static final class Builder extends Message.Builder<ThreadInfo> {
@@ -2394,6 +2410,7 @@ public final class ThreadInfo extends Message {
         public EditInfo edit_info;
         public String exposure_monitor_url;
         public List<TailInfo> ext_tails;
+        public String feed_nid;
         public Long fid;
         public List<PbContent> first_post_content;
         public Long first_post_id;
@@ -2582,6 +2599,7 @@ public final class ThreadInfo extends Message {
         public String video_id;
         public VideoInfo video_info;
         public String video_mobile_url;
+        public ThreadVideoOtherInfo video_other_info;
         public VideoDesc video_segment;
         public String video_swf;
         public VideoActive videoactive_info;
@@ -2848,6 +2866,8 @@ public final class ThreadInfo extends Message {
             this.tiebaplus_da_type_click = threadInfo.tiebaplus_da_type_click;
             this.video_card = threadInfo.video_card;
             this.poll_style = threadInfo.poll_style;
+            this.feed_nid = threadInfo.feed_nid;
+            this.video_other_info = threadInfo.video_other_info;
         }
 
         @Override // com.squareup.wire.Message.Builder

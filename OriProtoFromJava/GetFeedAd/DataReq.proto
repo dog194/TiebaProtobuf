@@ -4,7 +4,7 @@ import "AppTransmitData.proto";
 import "CommonReq.proto";
 
 message DataReq {
-    CommonReq f1386common = 1;
+    CommonReq f1393common = 1;
     AppTransmitData app_transmit_data = 2;
     string ad_place = 3;
     string ad_ext_params = 4;

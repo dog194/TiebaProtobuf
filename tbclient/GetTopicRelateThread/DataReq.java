@@ -10,7 +10,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1452common;
+    public final CommonReq f1459common;
 
     @ProtoField(tag = 6, type = Message.Datatype.UINT64)
     public final Long last_id;
@@ -62,7 +62,7 @@ public final class DataReq extends Message {
     public static final class Builder extends Message.Builder<DataReq> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1453common;
+        public CommonReq f1460common;
         public Long last_id;
         public Integer page_no;
         public Integer pmy_source;
@@ -84,7 +84,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1453common = dataReq.f1452common;
+            this.f1460common = dataReq.f1459common;
             this.topic_id = dataReq.topic_id;
             this.topic_name = dataReq.topic_name;
             this.rn = dataReq.rn;
@@ -108,7 +108,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1452common = builder.f1453common;
+            this.f1459common = builder.f1460common;
             Long l = builder.topic_id;
             if (l == null) {
                 this.topic_id = DEFAULT_TOPIC_ID;
@@ -184,7 +184,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1452common = builder.f1453common;
+        this.f1459common = builder.f1460common;
         this.topic_id = builder.topic_id;
         this.topic_name = builder.topic_name;
         this.rn = builder.rn;

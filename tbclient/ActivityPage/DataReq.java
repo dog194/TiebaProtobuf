@@ -13,7 +13,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1306common;
+    public final CommonReq f1311common;
 
     @ProtoField(tag = 3, type = Message.Datatype.INT32)
     public final Integer pn;
@@ -47,7 +47,7 @@ public final class DataReq extends Message {
         public String activity_name;
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1307common;
+        public CommonReq f1312common;
         public Integer pn;
         public Integer q_type;
         public Integer request_times;
@@ -64,7 +64,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1307common = dataReq.f1306common;
+            this.f1312common = dataReq.f1311common;
             this.activity_name = dataReq.activity_name;
             this.pn = dataReq.pn;
             this.rn = dataReq.rn;
@@ -84,7 +84,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1306common = builder.f1307common;
+            this.f1311common = builder.f1312common;
             String str = builder.activity_name;
             if (str == null) {
                 this.activity_name = "";
@@ -136,7 +136,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1306common = builder.f1307common;
+        this.f1311common = builder.f1312common;
         this.activity_name = builder.activity_name;
         this.pn = builder.pn;
         this.rn = builder.rn;

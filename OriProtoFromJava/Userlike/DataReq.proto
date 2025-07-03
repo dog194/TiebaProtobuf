@@ -3,7 +3,7 @@ syntax = "proto3";
 import "CommonReq.proto";
 
 message DataReq {
-    CommonReq f1558common = 1;
+    CommonReq f1565common = 1;
     string page_tag = 2;
     uint64 last_req_unix = 3;
     int32 follow_type = 4;

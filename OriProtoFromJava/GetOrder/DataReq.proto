@@ -4,7 +4,7 @@ import "CommonReq.proto";
 import "Wares.proto";
 
 message DataReq {
-    CommonReq f1420common = 1;
+    CommonReq f1427common = 1;
     uint32 pay_type = 2;
     uint32 is_left = 3;
     string order_url = 4;

@@ -19,7 +19,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1308common;
+    public final CommonReq f1315common;
 
     @ProtoField(tag = 4, type = Message.Datatype.INT32)
     public final Integer da_from;
@@ -43,7 +43,7 @@ public final class DataReq extends Message {
         public String channel;
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1309common;
+        public CommonReq f1316common;
         public Integer da_from;
         public String da_locate;
         public String da_type;
@@ -59,7 +59,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1309common = dataReq.f1308common;
+            this.f1316common = dataReq.f1315common;
             this.token = dataReq.token;
             this.da_locate = dataReq.da_locate;
             this.da_from = dataReq.da_from;
@@ -78,7 +78,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1308common = builder.f1309common;
+            this.f1315common = builder.f1316common;
             String str = builder.token;
             if (str == null) {
                 this.token = "";
@@ -124,7 +124,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1308common = builder.f1309common;
+        this.f1315common = builder.f1316common;
         this.token = builder.token;
         this.da_locate = builder.da_locate;
         this.da_from = builder.da_from;

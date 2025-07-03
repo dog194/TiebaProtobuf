@@ -4,6 +4,6 @@ import "AddMsgRecord/MsgRecord.proto";
 import "CommonReq.proto";
 
 message DataReq {
-    CommonReq f1312common = 1;
+    CommonReq f1319common = 1;
     repeated MsgRecord records = 2;
 }

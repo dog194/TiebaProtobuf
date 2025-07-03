@@ -6,6 +6,7 @@ import com.squareup.wire.ProtoField;
 /* loaded from: classes4.dex */
 public final class ShopGoodsInfo extends Message {
     public static final String DEFAULT_COVER_IMG = "";
+    public static final String DEFAULT_GOODS_DESC = "";
     public static final String DEFAULT_GOODS_NAME = "";
     public static final String DEFAULT_SCHEME = "";
     public static final String DEFAULT_URL = "";
@@ -21,6 +22,12 @@ public final class ShopGoodsInfo extends Message {
 
     @ProtoField(tag = 7, type = Message.Datatype.STRING)
     public final String cover_img;
+
+    @ProtoField(tag = 13, type = Message.Datatype.STRING)
+    public final String goods_desc;
+
+    @ProtoField(tag = 14, type = Message.Datatype.UINT32)
+    public final Integer goods_id;
 
     @ProtoField(tag = 1, type = Message.Datatype.STRING)
     public final String goods_name;
@@ -49,12 +56,15 @@ public final class ShopGoodsInfo extends Message {
     public static final Long DEFAULT_SALES = 0L;
     public static final Integer DEFAULT_CARD_STYLE = 0;
     public static final Long DEFAULT_THREAD_ID = 0L;
+    public static final Integer DEFAULT_GOODS_ID = 0;
 
     public static final class Builder extends Message.Builder<ShopGoodsInfo> {
         public Integer card_style;
         public ShopGoodsChannelInfo channel_info;
         public ShopGoodsCommentInfo comment_info;
         public String cover_img;
+        public String goods_desc;
+        public Integer goods_id;
         public String goods_name;
         public ListingReason listing_reason;
         public Integer price;
@@ -84,6 +94,8 @@ public final class ShopGoodsInfo extends Message {
             this.listing_reason = shopGoodsInfo.listing_reason;
             this.comment_info = shopGoodsInfo.comment_info;
             this.scheme = shopGoodsInfo.scheme;
+            this.goods_desc = shopGoodsInfo.goods_desc;
+            this.goods_id = shopGoodsInfo.goods_id;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -144,9 +156,21 @@ public final class ShopGoodsInfo extends Message {
             String str4 = builder.scheme;
             if (str4 == null) {
                 this.scheme = "";
-                return;
             } else {
                 this.scheme = str4;
+            }
+            String str5 = builder.goods_desc;
+            if (str5 == null) {
+                this.goods_desc = "";
+            } else {
+                this.goods_desc = str5;
+            }
+            Integer num3 = builder.goods_id;
+            if (num3 == null) {
+                this.goods_id = DEFAULT_GOODS_ID;
+                return;
+            } else {
+                this.goods_id = num3;
                 return;
             }
         }
@@ -162,5 +186,7 @@ public final class ShopGoodsInfo extends Message {
         this.listing_reason = builder.listing_reason;
         this.comment_info = builder.comment_info;
         this.scheme = builder.scheme;
+        this.goods_desc = builder.goods_desc;
+        this.goods_id = builder.goods_id;
     }
 }

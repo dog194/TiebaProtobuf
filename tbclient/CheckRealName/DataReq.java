@@ -10,7 +10,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1330common;
+    public final CommonReq f1337common;
 
     @ProtoField(tag = 2, type = Message.Datatype.STRING)
     public final String obj_source;
@@ -18,7 +18,7 @@ public final class DataReq extends Message {
     public static final class Builder extends Message.Builder<DataReq> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1331common;
+        public CommonReq f1338common;
         public String obj_source;
 
         public Builder() {
@@ -29,7 +29,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1331common = dataReq.f1330common;
+            this.f1338common = dataReq.f1337common;
             this.obj_source = dataReq.obj_source;
         }
 
@@ -42,7 +42,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1330common = builder.f1331common;
+            this.f1337common = builder.f1338common;
             String str = builder.obj_source;
             if (str == null) {
                 this.obj_source = "";
@@ -52,7 +52,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1330common = builder.f1331common;
+        this.f1337common = builder.f1338common;
         this.obj_source = builder.obj_source;
     }
 }

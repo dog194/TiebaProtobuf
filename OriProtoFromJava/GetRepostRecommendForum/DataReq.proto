@@ -3,7 +3,7 @@ syntax = "proto3";
 import "CommonReq.proto";
 
 message DataReq {
-    CommonReq f1432common = 1;
+    CommonReq f1439common = 1;
     string title = 2;
     string content = 3;
     int64 forum_id = 4;

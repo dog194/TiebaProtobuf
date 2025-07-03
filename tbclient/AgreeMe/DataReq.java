@@ -9,7 +9,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1322common;
+    public final CommonReq f1329common;
 
     @ProtoField(tag = 2, type = Message.Datatype.UINT64)
     public final Long id;
@@ -38,7 +38,7 @@ public final class DataReq extends Message {
     public static final class Builder extends Message.Builder<DataReq> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1323common;
+        public CommonReq f1330common;
         public Long id;
         public Integer q_type;
         public Integer rn;
@@ -54,7 +54,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1323common = dataReq.f1322common;
+            this.f1330common = dataReq.f1329common;
             this.id = dataReq.id;
             this.rn = dataReq.rn;
             this.scr_w = dataReq.scr_w;
@@ -72,7 +72,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1322common = builder.f1323common;
+            this.f1329common = builder.f1330common;
             Long l = builder.id;
             if (l == null) {
                 this.id = DEFAULT_ID;
@@ -112,7 +112,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1322common = builder.f1323common;
+        this.f1329common = builder.f1330common;
         this.id = builder.id;
         this.rn = builder.rn;
         this.scr_w = builder.scr_w;

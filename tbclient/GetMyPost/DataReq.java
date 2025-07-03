@@ -18,7 +18,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1416common;
+    public final CommonReq f1423common;
 
     @ProtoField(tag = 4, type = Message.Datatype.UINT64)
     public final Long forum_id;
@@ -68,7 +68,7 @@ public final class DataReq extends Message {
         public Integer call_from;
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1417common;
+        public CommonReq f1424common;
         public Long forum_id;
         public String frs_common_info;
         public Integer is_newfeed;
@@ -89,7 +89,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1417common = dataReq.f1416common;
+            this.f1424common = dataReq.f1423common;
             this.thread_id = dataReq.thread_id;
             this.post_id = dataReq.post_id;
             this.forum_id = dataReq.forum_id;
@@ -114,7 +114,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1416common = builder.f1417common;
+            this.f1423common = builder.f1424common;
             Long l = builder.thread_id;
             if (l == null) {
                 this.thread_id = DEFAULT_THREAD_ID;
@@ -196,7 +196,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1416common = builder.f1417common;
+        this.f1423common = builder.f1424common;
         this.thread_id = builder.thread_id;
         this.post_id = builder.post_id;
         this.forum_id = builder.forum_id;

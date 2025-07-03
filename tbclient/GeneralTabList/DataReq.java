@@ -30,7 +30,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1360common;
+    public final CommonReq f1367common;
 
     @ProtoField(tag = 3, type = Message.Datatype.INT64)
     public final Long forum_id;
@@ -130,7 +130,7 @@ public final class DataReq extends Message {
         public String ad_ext_params;
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1361common;
+        public CommonReq f1368common;
         public Long forum_id;
         public String forum_name;
         public String frs_common_info;
@@ -164,7 +164,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1361common = dataReq.f1360common;
+            this.f1368common = dataReq.f1367common;
             this.tab_id = dataReq.tab_id;
             this.forum_id = dataReq.forum_id;
             this.pn = dataReq.pn;
@@ -204,7 +204,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1360common = builder.f1361common;
+            this.f1367common = builder.f1368common;
             Integer num = builder.tab_id;
             if (num == null) {
                 this.tab_id = DEFAULT_TAB_ID;
@@ -376,7 +376,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1360common = builder.f1361common;
+        this.f1367common = builder.f1368common;
         this.tab_id = builder.tab_id;
         this.forum_id = builder.forum_id;
         this.pn = builder.pn;

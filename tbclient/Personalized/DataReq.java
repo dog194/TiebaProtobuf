@@ -51,10 +51,16 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1496common;
+    public final CommonReq f1503common;
 
     @ProtoField(tag = 14, type = Message.Datatype.STRING)
     public final String da_idfa;
+
+    @ProtoField(tag = 48, type = Message.Datatype.UINT64)
+    public final Long fake_forum_id;
+
+    @ProtoField(tag = 47, type = Message.Datatype.UINT64)
+    public final Long fake_thread_id;
 
     @ProtoField(tag = 34, type = Message.Datatype.STRING)
     public final String first_dir;
@@ -172,6 +178,8 @@ public final class DataReq extends Message {
     public static final Integer DEFAULT_IS_NEWFEED = 0;
     public static final Integer DEFAULT_IS_NEW_USER = 0;
     public static final Integer DEFAULT_CACHE_COLUMN_STYLE = 0;
+    public static final Long DEFAULT_FAKE_THREAD_ID = 0L;
+    public static final Long DEFAULT_FAKE_FORUM_ID = 0L;
 
     public static final class Builder extends Message.Builder<DataReq> {
         public String ad_bear_context;
@@ -184,8 +192,10 @@ public final class DataReq extends Message {
         public Integer cache_column_style;
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1497common;
+        public CommonReq f1504common;
         public String da_idfa;
+        public Long fake_forum_id;
+        public Long fake_thread_id;
         public String first_dir;
         public Long from_tid;
         public List<String> interest_tag;
@@ -226,7 +236,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1497common = dataReq.f1496common;
+            this.f1504common = dataReq.f1503common;
             this.tag_code = dataReq.tag_code;
             this.need_tags = dataReq.need_tags;
             this.load_type = dataReq.load_type;
@@ -267,6 +277,8 @@ public final class DataReq extends Message {
             this.is_new_user = dataReq.is_new_user;
             this.ad_external_info = dataReq.ad_external_info;
             this.cache_column_style = dataReq.cache_column_style;
+            this.fake_thread_id = dataReq.fake_thread_id;
+            this.fake_forum_id = dataReq.fake_forum_id;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -278,7 +290,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1496common = builder.f1497common;
+            this.f1503common = builder.f1504common;
             Integer num = builder.tag_code;
             if (num == null) {
                 this.tag_code = DEFAULT_TAG_CODE;
@@ -506,13 +518,25 @@ public final class DataReq extends Message {
             Integer num20 = builder.cache_column_style;
             if (num20 == null) {
                 this.cache_column_style = DEFAULT_CACHE_COLUMN_STYLE;
-                return;
             } else {
                 this.cache_column_style = num20;
+            }
+            Long l3 = builder.fake_thread_id;
+            if (l3 == null) {
+                this.fake_thread_id = DEFAULT_FAKE_THREAD_ID;
+            } else {
+                this.fake_thread_id = l3;
+            }
+            Long l4 = builder.fake_forum_id;
+            if (l4 == null) {
+                this.fake_forum_id = DEFAULT_FAKE_FORUM_ID;
+                return;
+            } else {
+                this.fake_forum_id = l4;
                 return;
             }
         }
-        this.f1496common = builder.f1497common;
+        this.f1503common = builder.f1504common;
         this.tag_code = builder.tag_code;
         this.need_tags = builder.need_tags;
         this.load_type = builder.load_type;
@@ -553,5 +577,7 @@ public final class DataReq extends Message {
         this.is_new_user = builder.is_new_user;
         this.ad_external_info = builder.ad_external_info;
         this.cache_column_style = builder.cache_column_style;
+        this.fake_thread_id = builder.fake_thread_id;
+        this.fake_forum_id = builder.fake_forum_id;
     }
 }

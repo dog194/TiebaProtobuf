@@ -13,7 +13,7 @@ message DataReq {
     uint32 scr_w = 5;
     uint32 scr_h = 6;
     uint32 q_type = 7;
-    CommonReq f1540common = 8;
+    CommonReq f1547common = 8;
     int64 user_id = 9;
     string da_idfa = 10;
     string platform = 11;

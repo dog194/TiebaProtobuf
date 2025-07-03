@@ -27,6 +27,9 @@ public final class CommonReq extends Message {
     public static final String DEFAULT_EXTRA = "";
     public static final String DEFAULT_FRAMEWORK_VER = "";
     public static final String DEFAULT_FROM = "";
+    public static final String DEFAULT_HM_ACUID = "";
+    public static final String DEFAULT_HM_NEEDMP = "";
+    public static final String DEFAULT_HM_OID = "";
     public static final String DEFAULT_H_RCS = "";
     public static final String DEFAULT_IDFA = "";
     public static final String DEFAULT_IDFV = "";
@@ -51,6 +54,7 @@ public final class CommonReq extends Message {
     public static final String DEFAULT_SAMPLE_ID = "";
     public static final String DEFAULT_SDK_VER = "";
     public static final String DEFAULT_SHOUBAI_CUID = "";
+    public static final String DEFAULT_SHOUBAI_VERSION = "";
     public static final String DEFAULT_SIGN = "";
     public static final String DEFAULT_SMALLFLOW = "";
     public static final String DEFAULT_START_SCHEME = "";
@@ -166,6 +170,15 @@ public final class CommonReq extends Message {
     @ProtoField(tag = 79, type = Message.Datatype.STRING)
     public final String h_rcs;
 
+    @ProtoField(tag = 84, type = Message.Datatype.STRING)
+    public final String hm_acuid;
+
+    @ProtoField(tag = 86, type = Message.Datatype.STRING)
+    public final String hm_needmp;
+
+    @ProtoField(tag = 85, type = Message.Datatype.STRING)
+    public final String hm_oid;
+
     @ProtoField(tag = 45, type = Message.Datatype.STRING)
     public final String idfa;
 
@@ -268,6 +281,9 @@ public final class CommonReq extends Message {
     @ProtoField(tag = 58, type = Message.Datatype.STRING)
     public final String shoubai_cuid;
 
+    @ProtoField(tag = 83, type = Message.Datatype.STRING)
+    public final String shoubai_version;
+
     @ProtoField(tag = 23, type = Message.Datatype.STRING)
     public final String sign;
 
@@ -356,6 +372,9 @@ public final class CommonReq extends Message {
         public String framework_ver;
         public String from;
         public String h_rcs;
+        public String hm_acuid;
+        public String hm_needmp;
+        public String hm_oid;
         public String idfa;
         public String idfv;
         public String iemi;
@@ -390,6 +409,7 @@ public final class CommonReq extends Message {
         public Integer scr_w;
         public String sdk_ver;
         public String shoubai_cuid;
+        public String shoubai_version;
         public String sign;
         public String smallflow;
         public String start_scheme;
@@ -490,6 +510,10 @@ public final class CommonReq extends Message {
             this.pid_rcs = commonReq.pid_rcs;
             this.need_decrypt = commonReq.need_decrypt;
             this.need_cam_decrypt = commonReq.need_cam_decrypt;
+            this.shoubai_version = commonReq.shoubai_version;
+            this.hm_acuid = commonReq.hm_acuid;
+            this.hm_oid = commonReq.hm_oid;
+            this.hm_needmp = commonReq.hm_needmp;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -972,9 +996,33 @@ public final class CommonReq extends Message {
             Integer num13 = builder.need_cam_decrypt;
             if (num13 == null) {
                 this.need_cam_decrypt = DEFAULT_NEED_CAM_DECRYPT;
-                return;
             } else {
                 this.need_cam_decrypt = num13;
+            }
+            String str62 = builder.shoubai_version;
+            if (str62 == null) {
+                this.shoubai_version = "";
+            } else {
+                this.shoubai_version = str62;
+            }
+            String str63 = builder.hm_acuid;
+            if (str63 == null) {
+                this.hm_acuid = "";
+            } else {
+                this.hm_acuid = str63;
+            }
+            String str64 = builder.hm_oid;
+            if (str64 == null) {
+                this.hm_oid = "";
+            } else {
+                this.hm_oid = str64;
+            }
+            String str65 = builder.hm_needmp;
+            if (str65 == null) {
+                this.hm_needmp = "";
+                return;
+            } else {
+                this.hm_needmp = str65;
                 return;
             }
         }
@@ -1057,5 +1105,9 @@ public final class CommonReq extends Message {
         this.pid_rcs = builder.pid_rcs;
         this.need_decrypt = builder.need_decrypt;
         this.need_cam_decrypt = builder.need_cam_decrypt;
+        this.shoubai_version = builder.shoubai_version;
+        this.hm_acuid = builder.hm_acuid;
+        this.hm_oid = builder.hm_oid;
+        this.hm_needmp = builder.hm_needmp;
     }
 }

@@ -15,6 +15,7 @@ public final class ThreadRecommendInfo extends Message {
     public static final String DEFAULT_JUMP_ICON = "";
     public static final String DEFAULT_JUMP_LINK = "";
     public static final String DEFAULT_JUMP_TEXT = "";
+    public static final String DEFAULT_PRICE = "";
     public static final String DEFAULT_RECOMMEND_ICON = "";
     public static final String DEFAULT_RECOMMEND_ICON_BACKGROUND = "";
     public static final String DEFAULT_RECOMMEND_REASON = "";
@@ -59,6 +60,9 @@ public final class ThreadRecommendInfo extends Message {
     @ProtoField(tag = 2, type = Message.Datatype.STRING)
     public final String forum_name;
 
+    @ProtoField(tag = 34)
+    public final ThemeColorInfo icon_info;
+
     @ProtoField(tag = 17, type = Message.Datatype.STRING)
     public final String jump_icon;
 
@@ -73,6 +77,9 @@ public final class ThreadRecommendInfo extends Message {
 
     @ProtoField(label = Message.Label.REPEATED, tag = 31)
     public final List<FeedKV> log_param;
+
+    @ProtoField(tag = 33, type = Message.Datatype.STRING)
+    public final String price;
 
     @ProtoField(tag = 9, type = Message.Datatype.STRING)
     public final String recommend_icon;
@@ -135,11 +142,13 @@ public final class ThreadRecommendInfo extends Message {
         public ThemeColorInfo dot_color;
         public String forum_avatar;
         public String forum_name;
+        public ThemeColorInfo icon_info;
         public String jump_icon;
         public String jump_link;
         public String jump_text;
         public ThemeColorInfo jump_text_color;
         public List<FeedKV> log_param;
+        public String price;
         public String recommend_icon;
         public String recommend_icon_background;
         public String recommend_reason;
@@ -194,6 +203,8 @@ public final class ThreadRecommendInfo extends Message {
             this.button_color = threadRecommendInfo.button_color;
             this.button_link = threadRecommendInfo.button_link;
             this.log_param = Message.copyOf(threadRecommendInfo.log_param);
+            this.price = threadRecommendInfo.price;
+            this.icon_info = threadRecommendInfo.icon_info;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -338,11 +349,17 @@ public final class ThreadRecommendInfo extends Message {
             List<FeedKV> list2 = builder.log_param;
             if (list2 == null) {
                 this.log_param = DEFAULT_LOG_PARAM;
-                return;
             } else {
                 this.log_param = Message.immutableCopyOf(list2);
-                return;
             }
+            String str16 = builder.price;
+            if (str16 == null) {
+                this.price = "";
+            } else {
+                this.price = str16;
+            }
+            this.icon_info = builder.icon_info;
+            return;
         }
         this.forum_avatar = builder.forum_avatar;
         this.forum_name = builder.forum_name;
@@ -375,5 +392,7 @@ public final class ThreadRecommendInfo extends Message {
         this.button_color = builder.button_color;
         this.button_link = builder.button_link;
         this.log_param = Message.immutableCopyOf(builder.log_param);
+        this.price = builder.price;
+        this.icon_info = builder.icon_info;
     }
 }

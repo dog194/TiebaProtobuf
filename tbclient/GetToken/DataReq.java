@@ -11,7 +11,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1450common;
+    public final CommonReq f1457common;
 
     @ProtoField(tag = 3, type = Message.Datatype.STRING)
     public final String shoubaicuid;
@@ -22,7 +22,7 @@ public final class DataReq extends Message {
     public static final class Builder extends Message.Builder<DataReq> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1451common;
+        public CommonReq f1458common;
         public String shoubaicuid;
         public String token;
 
@@ -34,7 +34,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1451common = dataReq.f1450common;
+            this.f1458common = dataReq.f1457common;
             this.token = dataReq.token;
             this.shoubaicuid = dataReq.shoubaicuid;
         }
@@ -48,7 +48,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1450common = builder.f1451common;
+            this.f1457common = builder.f1458common;
             String str = builder.token;
             if (str == null) {
                 this.token = "";
@@ -64,7 +64,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1450common = builder.f1451common;
+        this.f1457common = builder.f1458common;
         this.token = builder.token;
         this.shoubaicuid = builder.shoubaicuid;
     }

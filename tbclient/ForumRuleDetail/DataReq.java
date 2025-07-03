@@ -9,7 +9,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 2)
-    public final CommonReq f1356common;
+    public final CommonReq f1363common;
 
     @ProtoField(tag = 4, type = Message.Datatype.INT64)
     public final Long customize_rule_version;
@@ -30,7 +30,7 @@ public final class DataReq extends Message {
     public static final class Builder extends Message.Builder<DataReq> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1357common;
+        public CommonReq f1364common;
         public Long customize_rule_version;
         public Long default_rule_version;
         public Long forum_id;
@@ -45,7 +45,7 @@ public final class DataReq extends Message {
                 return;
             }
             this.forum_id = dataReq.forum_id;
-            this.f1357common = dataReq.f1356common;
+            this.f1364common = dataReq.f1363common;
             this.default_rule_version = dataReq.default_rule_version;
             this.customize_rule_version = dataReq.customize_rule_version;
             this.is_edit = dataReq.is_edit;
@@ -66,7 +66,7 @@ public final class DataReq extends Message {
             } else {
                 this.forum_id = l;
             }
-            this.f1356common = builder.f1357common;
+            this.f1363common = builder.f1364common;
             Long l2 = builder.default_rule_version;
             if (l2 == null) {
                 this.default_rule_version = DEFAULT_DEFAULT_RULE_VERSION;
@@ -89,7 +89,7 @@ public final class DataReq extends Message {
             }
         }
         this.forum_id = builder.forum_id;
-        this.f1356common = builder.f1357common;
+        this.f1363common = builder.f1364common;
         this.default_rule_version = builder.default_rule_version;
         this.customize_rule_version = builder.customize_rule_version;
         this.is_edit = builder.is_edit;

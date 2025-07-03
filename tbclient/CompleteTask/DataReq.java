@@ -12,7 +12,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 1)
-    public final CommonReq f1336common;
+    public final CommonReq f1343common;
 
     @ProtoField(tag = 3, type = Message.Datatype.STRING)
     public final String compelete_id;
@@ -26,7 +26,7 @@ public final class DataReq extends Message {
     public static final class Builder extends Message.Builder<DataReq> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1337common;
+        public CommonReq f1344common;
         public String compelete_id;
         public String shoubaicuid;
         public String token;
@@ -39,7 +39,7 @@ public final class DataReq extends Message {
             if (dataReq == null) {
                 return;
             }
-            this.f1337common = dataReq.f1336common;
+            this.f1344common = dataReq.f1343common;
             this.shoubaicuid = dataReq.shoubaicuid;
             this.compelete_id = dataReq.compelete_id;
             this.token = dataReq.token;
@@ -54,7 +54,7 @@ public final class DataReq extends Message {
     public DataReq(Builder builder, boolean z) {
         super(builder);
         if (z) {
-            this.f1336common = builder.f1337common;
+            this.f1343common = builder.f1344common;
             String str = builder.shoubaicuid;
             if (str == null) {
                 this.shoubaicuid = "";
@@ -76,7 +76,7 @@ public final class DataReq extends Message {
                 return;
             }
         }
-        this.f1336common = builder.f1337common;
+        this.f1343common = builder.f1344common;
         this.shoubaicuid = builder.shoubaicuid;
         this.compelete_id = builder.compelete_id;
         this.token = builder.token;

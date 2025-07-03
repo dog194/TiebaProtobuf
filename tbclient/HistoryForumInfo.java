@@ -51,6 +51,9 @@ public final class HistoryForumInfo extends Message {
     @ProtoField(tag = 4, type = Message.Datatype.INT32)
     public final Integer is_liveforum;
 
+    @ProtoField(tag = 28, type = Message.Datatype.INT32)
+    public final Integer is_official_forum;
+
     @ProtoField(tag = 16, type = Message.Datatype.INT32)
     public final Integer level_id;
 
@@ -95,6 +98,7 @@ public final class HistoryForumInfo extends Message {
     public static final Integer DEFAULT_THREAD_NUM = 0;
     public static final Integer DEFAULT_POST_NUM = 0;
     public static final Integer DEFAULT_IS_FORBIDDEN = 0;
+    public static final Integer DEFAULT_IS_OFFICIAL_FORUM = 0;
 
     public static final class Builder extends Message.Builder<HistoryForumInfo> {
         public String avatar;
@@ -110,6 +114,7 @@ public final class HistoryForumInfo extends Message {
         public Integer is_forum_business_account;
         public Integer is_like;
         public Integer is_liveforum;
+        public Integer is_official_forum;
         public Integer level_id;
         public Boolean need_trans;
         public Integer post_num;
@@ -152,6 +157,7 @@ public final class HistoryForumInfo extends Message {
             this.thread_num = historyForumInfo.thread_num;
             this.post_num = historyForumInfo.post_num;
             this.is_forbidden = historyForumInfo.is_forbidden;
+            this.is_official_forum = historyForumInfo.is_official_forum;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -278,9 +284,15 @@ public final class HistoryForumInfo extends Message {
             Integer num11 = builder.is_forbidden;
             if (num11 == null) {
                 this.is_forbidden = DEFAULT_IS_FORBIDDEN;
-                return;
             } else {
                 this.is_forbidden = num11;
+            }
+            Integer num12 = builder.is_official_forum;
+            if (num12 == null) {
+                this.is_official_forum = DEFAULT_IS_OFFICIAL_FORUM;
+                return;
+            } else {
+                this.is_official_forum = num12;
                 return;
             }
         }
@@ -307,5 +319,6 @@ public final class HistoryForumInfo extends Message {
         this.thread_num = builder.thread_num;
         this.post_num = builder.post_num;
         this.is_forbidden = builder.is_forbidden;
+        this.is_official_forum = builder.is_official_forum;
     }
 }

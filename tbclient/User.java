@@ -115,6 +115,9 @@ public final class User extends Message {
     @ProtoField(tag = 108)
     public final CreationData creation_data;
 
+    @ProtoField(tag = 165)
+    public final CurrentNameInfo current_name_info;
+
     @ProtoField(tag = 123, type = Message.Datatype.INT32)
     public final Integer display_auth_type;
 
@@ -153,6 +156,9 @@ public final class User extends Message {
 
     @ProtoField(tag = 121, type = Message.Datatype.STRING)
     public final String follow_from;
+
+    @ProtoField(tag = 164)
+    public final FormerNameInfo former_name_info;
 
     @ProtoField(label = Message.Label.REPEATED, tag = 113)
     public final List<ForumToolPerm> forum_tool_auth;
@@ -391,6 +397,9 @@ public final class User extends Message {
     @ProtoField(tag = 145)
     public final ShakeAdSwitch shake_ad_switch;
 
+    @ProtoField(tag = 163, type = Message.Datatype.INT32)
+    public final Integer show_former_name;
+
     @ProtoField(label = Message.Label.REPEATED, tag = 154)
     public final List<UserAttrIcon> show_icon_list;
 
@@ -577,6 +586,7 @@ public final class User extends Message {
     public static final Integer DEFAULT_IS_MGC_ACCOUNT = 0;
     public static final Integer DEFAULT_TRUNCATE_LINE = 0;
     public static final Integer DEFAULT_IS_NEED_AUTO_AT = 0;
+    public static final Integer DEFAULT_SHOW_FORMER_NAME = 0;
 
     public User(Builder builder, boolean z) {
         super(builder);
@@ -734,6 +744,9 @@ public final class User extends Message {
             this.is_mgc_account = builder.is_mgc_account;
             this.truncate_line = builder.truncate_line;
             this.is_need_auto_at = builder.is_need_auto_at;
+            this.show_former_name = builder.show_former_name;
+            this.former_name_info = builder.former_name_info;
+            this.current_name_info = builder.current_name_info;
             return;
         }
         Integer num = builder.is_login;
@@ -1439,6 +1452,14 @@ public final class User extends Message {
         } else {
             this.is_need_auto_at = num59;
         }
+        Integer num60 = builder.show_former_name;
+        if (num60 == null) {
+            this.show_former_name = DEFAULT_SHOW_FORMER_NAME;
+        } else {
+            this.show_former_name = num60;
+        }
+        this.former_name_info = builder.former_name_info;
+        this.current_name_info = builder.current_name_info;
     }
 
     public static final class Builder extends Message.Builder<User> {
@@ -1467,6 +1488,7 @@ public final class User extends Message {
         public Integer concern_num;
         public ConsumeInfo consume_info;
         public CreationData creation_data;
+        public CurrentNameInfo current_name_info;
         public Integer display_auth_type;
         public String display_intro;
         public String dynamic_url;
@@ -1480,6 +1502,7 @@ public final class User extends Message {
         public Integer fans_num;
         public Integer favorite_num;
         public String follow_from;
+        public FormerNameInfo former_name_info;
         public List<ForumToolPerm> forum_tool_auth;
         public Long friend_num;
         public Integer gender;
@@ -1559,6 +1582,7 @@ public final class User extends Message {
         public String seal_prefix;
         public Integer sex;
         public ShakeAdSwitch shake_ad_switch;
+        public Integer show_former_name;
         public List<UserAttrIcon> show_icon_list;
         public Integer show_pb_private_flag;
         public SpringVirtualUser spring_virtual_user;
@@ -1757,6 +1781,9 @@ public final class User extends Message {
             this.is_mgc_account = user.is_mgc_account;
             this.truncate_line = user.truncate_line;
             this.is_need_auto_at = user.is_need_auto_at;
+            this.show_former_name = user.show_former_name;
+            this.former_name_info = user.former_name_info;
+            this.current_name_info = user.current_name_info;
         }
 
         @Override // com.squareup.wire.Message.Builder

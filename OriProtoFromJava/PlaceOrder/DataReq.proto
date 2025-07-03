@@ -3,7 +3,7 @@ syntax = "proto3";
 import "CommonReq.proto";
 
 message DataReq {
-    CommonReq f1498common = 1;
+    CommonReq f1505common = 1;
     string scene_from = 2;
     uint32 gift_id = 3;
     uint64 benefit_userid = 4;

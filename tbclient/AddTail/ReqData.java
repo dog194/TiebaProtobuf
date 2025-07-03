@@ -12,7 +12,7 @@ public final class ReqData extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 4)
-    public final CommonReq f1318common;
+    public final CommonReq f1325common;
 
     @ProtoField(tag = 2, type = Message.Datatype.STRING)
     public final String fontColor;
@@ -26,7 +26,7 @@ public final class ReqData extends Message {
     public static final class Builder extends Message.Builder<ReqData> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1319common;
+        public CommonReq f1326common;
         public String fontColor;
         public String fontKeyName;
         public String tailContent;
@@ -42,7 +42,7 @@ public final class ReqData extends Message {
             this.tailContent = reqData.tailContent;
             this.fontColor = reqData.fontColor;
             this.fontKeyName = reqData.fontKeyName;
-            this.f1319common = reqData.f1318common;
+            this.f1326common = reqData.f1325common;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -72,12 +72,12 @@ public final class ReqData extends Message {
             } else {
                 this.fontKeyName = str3;
             }
-            this.f1318common = builder.f1319common;
+            this.f1325common = builder.f1326common;
             return;
         }
         this.tailContent = builder.tailContent;
         this.fontColor = builder.fontColor;
         this.fontKeyName = builder.fontKeyName;
-        this.f1318common = builder.f1319common;
+        this.f1325common = builder.f1326common;
     }
 }

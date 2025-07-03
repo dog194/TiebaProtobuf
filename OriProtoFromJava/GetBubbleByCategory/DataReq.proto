@@ -3,5 +3,5 @@ syntax = "proto3";
 import "CommonReq.proto";
 
 message DataReq {
-    CommonReq f1374common = 1;
+    CommonReq f1381common = 1;
 }

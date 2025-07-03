@@ -11,7 +11,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 3)
-    public final CommonReq f1424common;
+    public final CommonReq f1431common;
 
     @ProtoField(tag = 1, type = Message.Datatype.STRING)
     public final String lat;
@@ -22,7 +22,7 @@ public final class DataReq extends Message {
     public static final class Builder extends Message.Builder<DataReq> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1425common;
+        public CommonReq f1432common;
         public String lat;
         public String lng;
 
@@ -36,7 +36,7 @@ public final class DataReq extends Message {
             }
             this.lat = dataReq.lat;
             this.lng = dataReq.lng;
-            this.f1425common = dataReq.f1424common;
+            this.f1432common = dataReq.f1431common;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -60,11 +60,11 @@ public final class DataReq extends Message {
             } else {
                 this.lng = str2;
             }
-            this.f1424common = builder.f1425common;
+            this.f1431common = builder.f1432common;
             return;
         }
         this.lat = builder.lat;
         this.lng = builder.lng;
-        this.f1424common = builder.f1425common;
+        this.f1431common = builder.f1432common;
     }
 }

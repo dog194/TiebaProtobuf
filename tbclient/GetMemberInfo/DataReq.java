@@ -10,7 +10,7 @@ public final class DataReq extends Message {
 
     /* renamed from: common, reason: collision with root package name */
     @ProtoField(tag = 2)
-    public final CommonReq f1408common;
+    public final CommonReq f1415common;
 
     @ProtoField(tag = 1, type = Message.Datatype.UINT64)
     public final Long forum_id;
@@ -18,7 +18,7 @@ public final class DataReq extends Message {
     public static final class Builder extends Message.Builder<DataReq> {
 
         /* renamed from: common, reason: collision with root package name */
-        public CommonReq f1409common;
+        public CommonReq f1416common;
         public Long forum_id;
 
         public Builder() {
@@ -30,7 +30,7 @@ public final class DataReq extends Message {
                 return;
             }
             this.forum_id = dataReq.forum_id;
-            this.f1409common = dataReq.f1408common;
+            this.f1416common = dataReq.f1415common;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -48,10 +48,10 @@ public final class DataReq extends Message {
             } else {
                 this.forum_id = l;
             }
-            this.f1408common = builder.f1409common;
+            this.f1415common = builder.f1416common;
             return;
         }
         this.forum_id = builder.forum_id;
-        this.f1408common = builder.f1409common;
+        this.f1415common = builder.f1416common;
     }
 }

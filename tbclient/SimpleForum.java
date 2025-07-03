@@ -13,6 +13,8 @@ public final class SimpleForum extends Message {
     public static final String DEFAULT_FIRST_CLASS = "";
     public static final String DEFAULT_FORUM_TOUTU = "";
     public static final String DEFAULT_NAME = "";
+    public static final String DEFAULT_OFFICIAL_ICON = "";
+    public static final String DEFAULT_OFFICIAL_TEXT = "";
     public static final String DEFAULT_RECOMMEND_TIP = "";
     public static final String DEFAULT_SCHEME = "";
     public static final String DEFAULT_SECOND_CLASS = "";
@@ -54,6 +56,9 @@ public final class SimpleForum extends Message {
     @ProtoField(tag = 5, type = Message.Datatype.UINT32)
     public final Integer is_liked;
 
+    @ProtoField(tag = 31, type = Message.Datatype.INT32)
+    public final Integer is_official_forum;
+
     @ProtoField(tag = 6, type = Message.Datatype.UINT32)
     public final Integer is_signed;
 
@@ -68,6 +73,12 @@ public final class SimpleForum extends Message {
 
     @ProtoField(tag = 2, type = Message.Datatype.STRING)
     public final String name;
+
+    @ProtoField(tag = 29, type = Message.Datatype.STRING)
+    public final String official_icon;
+
+    @ProtoField(tag = 30, type = Message.Datatype.STRING)
+    public final String official_text;
 
     @ProtoField(label = Message.Label.REPEATED, tag = 21, type = Message.Datatype.STRING)
     public final List<String> pendants;
@@ -114,6 +125,7 @@ public final class SimpleForum extends Message {
     public static final List<String> DEFAULT_PENDANTS = Collections.emptyList();
     public static final Integer DEFAULT_THREAD_NUM = 0;
     public static final List<ThreadRecommendTag> DEFAULT_FORUM_TAGS = Collections.emptyList();
+    public static final Integer DEFAULT_IS_OFFICIAL_FORUM = 0;
 
     public static final class Builder extends Message.Builder<SimpleForum> {
         public String avatar;
@@ -128,11 +140,14 @@ public final class SimpleForum extends Message {
         public Integer is_exists;
         public Integer is_frs_mask;
         public Integer is_liked;
+        public Integer is_official_forum;
         public Integer is_signed;
         public Integer level_id;
         public Integer member_num;
         public MultiForumPerm multi_forum_perm;
         public String name;
+        public String official_icon;
+        public String official_text;
         public List<String> pendants;
         public Integer post_num;
         public String recommend_tip;
@@ -181,6 +196,9 @@ public final class SimpleForum extends Message {
             this.slogan = simpleForum.slogan;
             this.thread_num = simpleForum.thread_num;
             this.forum_tags = Message.copyOf(simpleForum.forum_tags);
+            this.official_icon = simpleForum.official_icon;
+            this.official_text = simpleForum.official_text;
+            this.is_official_forum = simpleForum.is_official_forum;
         }
 
         @Override // com.squareup.wire.Message.Builder
@@ -332,9 +350,27 @@ public final class SimpleForum extends Message {
             List<ThreadRecommendTag> list3 = builder.forum_tags;
             if (list3 == null) {
                 this.forum_tags = DEFAULT_FORUM_TAGS;
-                return;
             } else {
                 this.forum_tags = Message.immutableCopyOf(list3);
+            }
+            String str11 = builder.official_icon;
+            if (str11 == null) {
+                this.official_icon = "";
+            } else {
+                this.official_icon = str11;
+            }
+            String str12 = builder.official_text;
+            if (str12 == null) {
+                this.official_text = "";
+            } else {
+                this.official_text = str12;
+            }
+            Integer num10 = builder.is_official_forum;
+            if (num10 == null) {
+                this.is_official_forum = DEFAULT_IS_OFFICIAL_FORUM;
+                return;
+            } else {
+                this.is_official_forum = num10;
                 return;
             }
         }
@@ -366,5 +402,8 @@ public final class SimpleForum extends Message {
         this.slogan = builder.slogan;
         this.thread_num = builder.thread_num;
         this.forum_tags = Message.immutableCopyOf(builder.forum_tags);
+        this.official_icon = builder.official_icon;
+        this.official_text = builder.official_text;
+        this.is_official_forum = builder.is_official_forum;
     }
 }
